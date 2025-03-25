@@ -1,0 +1,265 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pydoc: module VFIC</title>
+<link rel="stylesheet" type="text/css" href="pydoc_data/_pydoc.css"></head><body>
+            <div style='float:left'>
+                Python 3.13.1 [tags/v3.13.1:0671451, MSC v.1942 64 bit (AMD64)]
+            </div>
+            <div style='float:right'>
+                <div style='text-align:center'>
+                  <a href="http://localhost:8000/index.html">Module Index</a>
+                  : <a href="http://localhost:8000/topics.html">Topics</a>
+                  : <a href="http://localhost:8000/keywords.html">Keywords</a>
+                </div>
+                <div>
+                    <form action="http://localhost:8000/get" style='display:inline;'>
+                      <input type=text name=key size=15>
+                      <input type=submit value="Get">
+                    </form>&nbsp;
+                    <form action="http://localhost:8000/search" style='display:inline;'>
+                      <input type=text name=key size=15>
+                      <input type=submit value="Search">
+                    </form>
+                </div>
+            </div>
+            <div style="clear:both;padding-top:.5em;">
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">VFIC - Version File Integrity Check</strong></td>
+<td class="extra"><a href="http://localhost:8000/">index</a><br></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="tkinter.filedialog.html">tkinter.filedialog</a><br>
+<a href="hashlib.html">hashlib</a><br>
+</td><td class="multicolumn"><a href="tkinter.messagebox.html">tkinter.messagebox</a><br>
+<a href="os.html">os</a><br>
+</td><td class="multicolumn"><a href="tkinter.html">tkinter</a><br>
+<a href="tkinter.ttk.html">tkinter.ttk</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="http://localhost:8000/builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="VFIC.html#IntegrityCheckerGUI">IntegrityCheckerGUI</a>
+</dt></dl>
+</dd>
+<dt class="heading-text"><a href="http://localhost:8000/builtins.html#tuple">builtins.tuple</a>(<a href="http://localhost:8000/builtins.html#object">builtins.object</a>)
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="VFIC.html#FileInfo">FileInfo</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="FileInfo">class <strong>FileInfo</strong></a>(<a href="http://localhost:8000/builtins.html#tuple">builtins.tuple</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="VFIC.html#FileInfo">FileInfo</a>(filename:&nbsp;str,&nbsp;extension:&nbsp;str,&nbsp;hash:&nbsp;str)<br>
+&nbsp;<br>
+Represents&nbsp;file&nbsp;metadata&nbsp;for&nbsp;integrity&nbsp;checking.<br>
+&nbsp;<br>
+Attributes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;filename&nbsp;(str):&nbsp;Name&nbsp;of&nbsp;the&nbsp;file.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;extension&nbsp;(str):&nbsp;File&nbsp;extension.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;hash&nbsp;(str):&nbsp;Hash&nbsp;value&nbsp;of&nbsp;the&nbsp;file.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="VFIC.html#FileInfo">FileInfo</a></dd>
+<dd><a href="http://localhost:8000/builtins.html#tuple">builtins.tuple</a></dd>
+<dd><a href="http://localhost:8000/builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="FileInfo-__getnewargs__"><strong>__getnewargs__</strong></a>(self)<span class="grey"><span class="heading-text"> from collections.FileInfo</span></span></dt><dd><span class="code">Return&nbsp;self&nbsp;as&nbsp;a&nbsp;plain&nbsp;<a href="http://localhost:8000/builtins.html#tuple">tuple</a>.&nbsp;&nbsp;Used&nbsp;by&nbsp;copy&nbsp;and&nbsp;pickle.</span></dd></dl>
+
+<dl><dt><a name="FileInfo-__replace__"><strong>__replace__</strong></a> = <a href="VFIC.html#FileInfo-_replace">_replace</a>(self, /, **kwds)</dt></dl>
+
+<dl><dt><a name="FileInfo-__repr__"><strong>__repr__</strong></a>(self)<span class="grey"><span class="heading-text"> from collections.FileInfo</span></span></dt><dd><span class="code">Return&nbsp;a&nbsp;nicely&nbsp;formatted&nbsp;representation&nbsp;string</span></dd></dl>
+
+<dl><dt><a name="FileInfo-_asdict"><strong>_asdict</strong></a>(self)<span class="grey"><span class="heading-text"> from collections.FileInfo</span></span></dt><dd><span class="code">Return&nbsp;a&nbsp;new&nbsp;dict&nbsp;which&nbsp;maps&nbsp;field&nbsp;names&nbsp;to&nbsp;their&nbsp;values.</span></dd></dl>
+
+<dl><dt><a name="FileInfo-_replace"><strong>_replace</strong></a>(self, /, **kwds)<span class="grey"><span class="heading-text"> from collections.FileInfo</span></span></dt><dd><span class="code">Return&nbsp;a&nbsp;new&nbsp;<a href="VFIC.html#FileInfo">FileInfo</a>&nbsp;<a href="http://localhost:8000/builtins.html#object">object</a>&nbsp;replacing&nbsp;specified&nbsp;fields&nbsp;with&nbsp;new&nbsp;values</span></dd></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="FileInfo-_make"><strong>_make</strong></a>(iterable)<span class="grey"><span class="heading-text"> from collections.FileInfo</span></span></dt><dd><span class="code">Make&nbsp;a&nbsp;new&nbsp;<a href="VFIC.html#FileInfo">FileInfo</a>&nbsp;<a href="http://localhost:8000/builtins.html#object">object</a>&nbsp;from&nbsp;a&nbsp;sequence&nbsp;or&nbsp;iterable</span></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="FileInfo-__new__"><strong>__new__</strong></a>(_cls, filename: str, extension: str, hash: str)<span class="grey"><span class="heading-text"> from namedtuple_FileInfo.FileInfo</span></span></dt><dd><span class="code">Create&nbsp;new&nbsp;instance&nbsp;of&nbsp;<a href="VFIC.html#FileInfo">FileInfo</a>(filename,&nbsp;extension,&nbsp;hash)</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>filename</strong></dt>
+<dd><span class="code">Alias&nbsp;for&nbsp;field&nbsp;number&nbsp;0</span></dd>
+</dl>
+<dl><dt><strong>extension</strong></dt>
+<dd><span class="code">Alias&nbsp;for&nbsp;field&nbsp;number&nbsp;1</span></dd>
+</dl>
+<dl><dt><strong>hash</strong></dt>
+<dd><span class="code">Alias&nbsp;for&nbsp;field&nbsp;number&nbsp;2</span></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__annotations__</strong> = {'extension': &lt;class 'str'&gt;, 'filename': &lt;class 'str'&gt;, 'hash': &lt;class 'str'&gt;}</dl>
+
+<dl><dt><strong>__match_args__</strong> = ('filename', 'extension', 'hash')</dl>
+
+<dl><dt><strong>__orig_bases__</strong> = (&lt;function NamedTuple&gt;,)</dl>
+
+<dl><dt><strong>_field_defaults</strong> = {}</dl>
+
+<dl><dt><strong>_fields</strong> = ('filename', 'extension', 'hash')</dl>
+
+<hr>
+Methods inherited from <a href="http://localhost:8000/builtins.html#tuple">builtins.tuple</a>:<br>
+<dl><dt><a name="FileInfo-__add__"><strong>__add__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self+value.</span></dd></dl>
+
+<dl><dt><a name="FileInfo-__contains__"><strong>__contains__</strong></a>(self, key, /)</dt><dd><span class="code">Return&nbsp;bool(key&nbsp;in&nbsp;self).</span></dd></dl>
+
+<dl><dt><a name="FileInfo-__eq__"><strong>__eq__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self==value.</span></dd></dl>
+
+<dl><dt><a name="FileInfo-__ge__"><strong>__ge__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self&gt;=value.</span></dd></dl>
+
+<dl><dt><a name="FileInfo-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><span class="code">Return&nbsp;getattr(self,&nbsp;name).</span></dd></dl>
+
+<dl><dt><a name="FileInfo-__getitem__"><strong>__getitem__</strong></a>(self, key, /)</dt><dd><span class="code">Return&nbsp;self[key].</span></dd></dl>
+
+<dl><dt><a name="FileInfo-__gt__"><strong>__gt__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self&gt;value.</span></dd></dl>
+
+<dl><dt><a name="FileInfo-__hash__"><strong>__hash__</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;<a href="VFIC.html#FileInfo-hash">hash</a>(self).</span></dd></dl>
+
+<dl><dt><a name="FileInfo-__iter__"><strong>__iter__</strong></a>(self, /)</dt><dd><span class="code">Implement&nbsp;iter(self).</span></dd></dl>
+
+<dl><dt><a name="FileInfo-__le__"><strong>__le__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self&lt;=value.</span></dd></dl>
+
+<dl><dt><a name="FileInfo-__len__"><strong>__len__</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;len(self).</span></dd></dl>
+
+<dl><dt><a name="FileInfo-__lt__"><strong>__lt__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self&lt;value.</span></dd></dl>
+
+<dl><dt><a name="FileInfo-__mul__"><strong>__mul__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self*value.</span></dd></dl>
+
+<dl><dt><a name="FileInfo-__ne__"><strong>__ne__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self!=value.</span></dd></dl>
+
+<dl><dt><a name="FileInfo-__rmul__"><strong>__rmul__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;value*self.</span></dd></dl>
+
+<dl><dt><a name="FileInfo-count"><strong>count</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;number&nbsp;of&nbsp;occurrences&nbsp;of&nbsp;value.</span></dd></dl>
+
+<dl><dt><a name="FileInfo-index"><strong>index</strong></a>(self, value, start=0, stop=9223372036854775807, /)</dt><dd><span class="code">Return&nbsp;first&nbsp;index&nbsp;of&nbsp;value.<br>
+&nbsp;<br>
+Raises&nbsp;ValueError&nbsp;if&nbsp;the&nbsp;value&nbsp;is&nbsp;not&nbsp;present.</span></dd></dl>
+
+<hr>
+Class methods inherited from <a href="http://localhost:8000/builtins.html#tuple">builtins.tuple</a>:<br>
+<dl><dt><a name="FileInfo-__class_getitem__"><strong>__class_getitem__</strong></a>(object, /)</dt><dd><span class="code">See&nbsp;<a href="https://peps.python.org/pep-0585/">PEP&nbsp;585</a></span></dd></dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="IntegrityCheckerGUI">class <strong>IntegrityCheckerGUI</strong></a>(<a href="http://localhost:8000/builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="VFIC.html#IntegrityCheckerGUI">IntegrityCheckerGUI</a>(root)<br>
+&nbsp;<br>
+GUI&nbsp;application&nbsp;for&nbsp;checking&nbsp;file&nbsp;integrity&nbsp;against&nbsp;a&nbsp;reference&nbsp;hash&nbsp;file.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="IntegrityCheckerGUI-__init__"><strong>__init__</strong></a>(self, root)</dt><dd><span class="code">Initialize&nbsp;the&nbsp;<a href="VFIC.html#IntegrityCheckerGUI">IntegrityCheckerGUI</a>.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;root&nbsp;(tk.Tk):&nbsp;The&nbsp;root&nbsp;Tkinter&nbsp;window.</span></dd></dl>
+
+<dl><dt><a name="IntegrityCheckerGUI-browse_directory"><strong>browse_directory</strong></a>(self)</dt><dd><span class="code">Open&nbsp;a&nbsp;directory&nbsp;selection&nbsp;dialog&nbsp;and&nbsp;update&nbsp;the&nbsp;entry&nbsp;field.</span></dd></dl>
+
+<dl><dt><a name="IntegrityCheckerGUI-calculate_file_hash"><strong>calculate_file_hash</strong></a>(self, filepath: str) -&gt; Optional[str]</dt><dd><span class="code">Calculate&nbsp;the&nbsp;SHA-1&nbsp;hash&nbsp;of&nbsp;a&nbsp;file.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;filepath&nbsp;(str):&nbsp;Path&nbsp;to&nbsp;the&nbsp;file.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Optional[str]:&nbsp;The&nbsp;first&nbsp;16&nbsp;characters&nbsp;of&nbsp;the&nbsp;SHA-1&nbsp;hash,&nbsp;or&nbsp;None&nbsp;if&nbsp;an&nbsp;error&nbsp;occurs.</span></dd></dl>
+
+<dl><dt><a name="IntegrityCheckerGUI-check_integrity"><strong>check_integrity</strong></a>(self)</dt><dd><span class="code">Perform&nbsp;the&nbsp;file&nbsp;integrity&nbsp;check&nbsp;against&nbsp;reference&nbsp;data.</span></dd></dl>
+
+<dl><dt><a name="IntegrityCheckerGUI-create_debug_console"><strong>create_debug_console</strong></a>(self)</dt><dd><span class="code">Set&nbsp;up&nbsp;the&nbsp;debug&nbsp;console&nbsp;text&nbsp;widget.</span></dd></dl>
+
+<dl><dt><a name="IntegrityCheckerGUI-create_treeview"><strong>create_treeview</strong></a>(self, parent)</dt><dd><span class="code">Create&nbsp;and&nbsp;configure&nbsp;the&nbsp;Treeview&nbsp;widget&nbsp;for&nbsp;displaying&nbsp;file&nbsp;check&nbsp;results.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;parent:&nbsp;The&nbsp;parent&nbsp;widget&nbsp;to&nbsp;contain&nbsp;the&nbsp;Treeview.</span></dd></dl>
+
+<dl><dt><a name="IntegrityCheckerGUI-create_widgets"><strong>create_widgets</strong></a>(self)</dt><dd><span class="code">Create&nbsp;and&nbsp;arrange&nbsp;the&nbsp;main&nbsp;GUI&nbsp;widgets.</span></dd></dl>
+
+<dl><dt><a name="IntegrityCheckerGUI-debug_print"><strong>debug_print</strong></a>(self, message, link=False)</dt><dd><span class="code">Display&nbsp;a&nbsp;message&nbsp;in&nbsp;the&nbsp;debug&nbsp;console.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;message&nbsp;(str):&nbsp;The&nbsp;message&nbsp;to&nbsp;display.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;link&nbsp;(bool,&nbsp;optional):&nbsp;If&nbsp;True,&nbsp;display&nbsp;as&nbsp;a&nbsp;clickable&nbsp;link.&nbsp;Defaults&nbsp;to&nbsp;False.</span></dd></dl>
+
+<dl><dt><a name="IntegrityCheckerGUI-open_log_file"><strong>open_log_file</strong></a>(self, event)</dt><dd><span class="code">Open&nbsp;the&nbsp;saved&nbsp;log&nbsp;file&nbsp;in&nbsp;the&nbsp;default&nbsp;system&nbsp;application.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;event:&nbsp;The&nbsp;event&nbsp;triggering&nbsp;the&nbsp;action&nbsp;(mouse&nbsp;click).</span></dd></dl>
+
+<dl><dt><a name="IntegrityCheckerGUI-parse_reference_data"><strong>parse_reference_data</strong></a>(self, filepath: str) -&gt; Tuple[Dict[str, VFIC.FileInfo], str]</dt><dd><span class="code">Parse&nbsp;reference&nbsp;hash&nbsp;data&nbsp;from&nbsp;a&nbsp;file.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;filepath&nbsp;(str):&nbsp;Path&nbsp;to&nbsp;the&nbsp;reference&nbsp;file.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Tuple[Dict[str,&nbsp;<a href="VFIC.html#FileInfo">FileInfo</a>],&nbsp;str]:&nbsp;A&nbsp;dictionary&nbsp;of&nbsp;file&nbsp;info&nbsp;and&nbsp;the&nbsp;final&nbsp;message.</span></dd></dl>
+
+<dl><dt><a name="IntegrityCheckerGUI-save_log"><strong>save_log</strong></a>(self, directory)</dt><dd><span class="code">Save&nbsp;the&nbsp;log&nbsp;messages&nbsp;to&nbsp;a&nbsp;file&nbsp;in&nbsp;the&nbsp;specified&nbsp;directory.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;directory&nbsp;(str):&nbsp;The&nbsp;directory&nbsp;where&nbsp;the&nbsp;log&nbsp;file&nbsp;will&nbsp;be&nbsp;saved.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-main"><strong>main</strong></a>()</dt><dd><span class="code">Entry&nbsp;point&nbsp;for&nbsp;the&nbsp;Integrity&nbsp;Checker&nbsp;application.</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>ACCENT_COLOR</strong> = '#0288D1'<br>
+<strong>ACCENT_COLOR_ACTIVE</strong> = '#03A9F4'<br>
+<strong>BACKGROUND_COLOR</strong> = '#1E1E1E'<br>
+<strong>BUTTON_FONT</strong> = ('Helvetica', 9)<br>
+<strong>BUTTON_PADDING</strong> = 3<br>
+<strong>CARD_COLOR</strong> = '#2C2C2C'<br>
+<strong>Dict</strong> = typing.Dict<br>
+<strong>FONT_BOLD</strong> = ('Helvetica', 10, 'bold')<br>
+<strong>FONT_DEFAULT</strong> = ('Helvetica', 10)<br>
+<strong>FOREGROUND_COLOR</strong> = '#E0E0E0'<br>
+<strong>Optional</strong> = typing.Optional<br>
+<strong>PADDING</strong> = 10<br>
+<strong>Tuple</strong> = typing.Tuple</td></tr></table></div>
+</body></html>

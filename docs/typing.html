@@ -1,0 +1,2196 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pydoc: module typing</title>
+<link rel="stylesheet" type="text/css" href="pydoc_data/_pydoc.css"></head><body>
+            <div style='float:left'>
+                Python 3.13.1 [tags/v3.13.1:0671451, MSC v.1942 64 bit (AMD64)]
+            </div>
+            <div style='float:right'>
+                <div style='text-align:center'>
+                  <a href="http://localhost:8000/index.html">Module Index</a>
+                  : <a href="http://localhost:8000/topics.html">Topics</a>
+                  : <a href="http://localhost:8000/keywords.html">Keywords</a>
+                </div>
+                <div>
+                    <form action="http://localhost:8000/get" style='display:inline;'>
+                      <input type=text name=key size=15>
+                      <input type=submit value="Get">
+                    </form>&nbsp;
+                    <form action="http://localhost:8000/search" style='display:inline;'>
+                      <input type=text name=key size=15>
+                      <input type=submit value="Search">
+                    </form>
+                </div>
+            </div>
+            <div style="clear:both;padding-top:.5em;">
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">typing</strong></td>
+<td class="extra"><a href="http://localhost:8000/">index</a><br><br><a href="https://docs.python.org/3.13/library/typing.html">Module Reference</a></td></tr></table>
+    <p><span class="code">The&nbsp;typing&nbsp;module:&nbsp;Support&nbsp;for&nbsp;gradual&nbsp;typing&nbsp;as&nbsp;defined&nbsp;by&nbsp;<a href="https://peps.python.org/pep-0484/">PEP&nbsp;484</a>&nbsp;and&nbsp;subsequent&nbsp;PEPs.<br>
+&nbsp;<br>
+Among&nbsp;other&nbsp;things,&nbsp;the&nbsp;module&nbsp;includes&nbsp;the&nbsp;following:<br>
+*&nbsp;<a href="typing.html#Generic">Generic</a>,&nbsp;<a href="typing.html#Protocol">Protocol</a>,&nbsp;and&nbsp;internal&nbsp;machinery&nbsp;to&nbsp;support&nbsp;generic&nbsp;aliases.<br>
+&nbsp;&nbsp;All&nbsp;subscripted&nbsp;types&nbsp;like&nbsp;X[int],&nbsp;Union[int,&nbsp;str]&nbsp;are&nbsp;generic&nbsp;aliases.<br>
+*&nbsp;Various&nbsp;"special&nbsp;forms"&nbsp;that&nbsp;have&nbsp;unique&nbsp;meanings&nbsp;in&nbsp;type&nbsp;annotations:<br>
+&nbsp;&nbsp;NoReturn,&nbsp;Never,&nbsp;ClassVar,&nbsp;Self,&nbsp;Concatenate,&nbsp;Unpack,&nbsp;and&nbsp;others.<br>
+*&nbsp;Classes&nbsp;whose&nbsp;instances&nbsp;can&nbsp;be&nbsp;type&nbsp;arguments&nbsp;to&nbsp;generic&nbsp;classes&nbsp;and&nbsp;functions:<br>
+&nbsp;&nbsp;<a href="typing.html#TypeVar">TypeVar</a>,&nbsp;<a href="typing.html#ParamSpec">ParamSpec</a>,&nbsp;<a href="typing.html#TypeVarTuple">TypeVarTuple</a>.<br>
+*&nbsp;Public&nbsp;helper&nbsp;functions:&nbsp;get_type_hints,&nbsp;overload,&nbsp;cast,&nbsp;final,&nbsp;and&nbsp;others.<br>
+*&nbsp;Several&nbsp;protocols&nbsp;to&nbsp;support&nbsp;duck-typing:<br>
+&nbsp;&nbsp;<a href="typing.html#SupportsFloat">SupportsFloat</a>,&nbsp;<a href="typing.html#SupportsIndex">SupportsIndex</a>,&nbsp;<a href="typing.html#SupportsAbs">SupportsAbs</a>,&nbsp;and&nbsp;others.<br>
+*&nbsp;Special&nbsp;types:&nbsp;<a href="typing.html#NewType">NewType</a>,&nbsp;NamedTuple,&nbsp;TypedDict.<br>
+*&nbsp;Deprecated&nbsp;aliases&nbsp;for&nbsp;builtin&nbsp;types&nbsp;and&nbsp;collections.abc&nbsp;ABCs.<br>
+&nbsp;<br>
+<a href="typing.html#Any">Any</a>&nbsp;name&nbsp;not&nbsp;present&nbsp;in&nbsp;__all__&nbsp;is&nbsp;an&nbsp;implementation&nbsp;detail<br>
+that&nbsp;may&nbsp;be&nbsp;changed&nbsp;without&nbsp;notice.&nbsp;Use&nbsp;at&nbsp;your&nbsp;own&nbsp;risk!</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="http://localhost:8000/collections.html">collections</a><br>
+<a href="http://localhost:8000/copyreg.html">copyreg</a><br>
+</td><td class="multicolumn"><a href="http://localhost:8000/functools.html">functools</a><br>
+<a href="http://localhost:8000/operator.html">operator</a><br>
+</td><td class="multicolumn"><a href="http://localhost:8000/sys.html">sys</a><br>
+<a href="http://localhost:8000/types.html">types</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="http://localhost:8000/builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="http://localhost:8000/builtins.html#str">builtins.str</a>
+</dt><dt class="heading-text"><a href="typing.html#Any">Any</a>
+</dt><dt class="heading-text"><a href="typing.html#Generic">Generic</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="typing.html#IO">IO</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="typing.html#BinaryIO">BinaryIO</a>
+</dt><dt class="heading-text"><a href="typing.html#TextIO">TextIO</a>
+</dt></dl>
+</dd>
+<dt class="heading-text"><a href="typing.html#Protocol">Protocol</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="typing.html#SupportsAbs">SupportsAbs</a>
+</dt><dt class="heading-text"><a href="typing.html#SupportsBytes">SupportsBytes</a>
+</dt><dt class="heading-text"><a href="typing.html#SupportsComplex">SupportsComplex</a>
+</dt><dt class="heading-text"><a href="typing.html#SupportsFloat">SupportsFloat</a>
+</dt><dt class="heading-text"><a href="typing.html#SupportsIndex">SupportsIndex</a>
+</dt><dt class="heading-text"><a href="typing.html#SupportsInt">SupportsInt</a>
+</dt><dt class="heading-text"><a href="typing.html#SupportsRound">SupportsRound</a>
+</dt></dl>
+</dd>
+</dl>
+</dd>
+<dt class="heading-text"><a href="typing.html#NewType">NewType</a>
+</dt><dt class="heading-text"><a href="typing.html#ParamSpec">ParamSpec</a>
+</dt><dt class="heading-text"><a href="typing.html#ParamSpecArgs">ParamSpecArgs</a>
+</dt><dt class="heading-text"><a href="typing.html#ParamSpecKwargs">ParamSpecKwargs</a>
+</dt><dt class="heading-text"><a href="typing.html#TypeAliasType">TypeAliasType</a>
+</dt><dt class="heading-text"><a href="typing.html#TypeVar">TypeVar</a>
+</dt><dt class="heading-text"><a href="typing.html#TypeVarTuple">TypeVarTuple</a>
+</dt></dl>
+</dd>
+<dt class="heading-text"><a href="typing.html#_Final">_Final</a>(<a href="http://localhost:8000/builtins.html#object">builtins.object</a>)
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="typing.html#ForwardRef">ForwardRef</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Any">class <strong>Any</strong></a>(<a href="http://localhost:8000/builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="typing.html#Any">Any</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+Special&nbsp;type&nbsp;indicating&nbsp;an&nbsp;unconstrained&nbsp;type.<br>
+&nbsp;<br>
+-&nbsp;<a href="typing.html#Any">Any</a>&nbsp;is&nbsp;compatible&nbsp;with&nbsp;every&nbsp;type.<br>
+-&nbsp;<a href="typing.html#Any">Any</a>&nbsp;assumed&nbsp;to&nbsp;have&nbsp;all&nbsp;methods.<br>
+-&nbsp;All&nbsp;values&nbsp;assumed&nbsp;to&nbsp;be&nbsp;instances&nbsp;of&nbsp;<a href="typing.html#Any">Any</a>.<br>
+&nbsp;<br>
+Note&nbsp;that&nbsp;all&nbsp;the&nbsp;above&nbsp;statements&nbsp;are&nbsp;true&nbsp;from&nbsp;the&nbsp;point&nbsp;of&nbsp;view&nbsp;of<br>
+static&nbsp;type&nbsp;checkers.&nbsp;At&nbsp;runtime,&nbsp;<a href="typing.html#Any">Any</a>&nbsp;should&nbsp;not&nbsp;be&nbsp;used&nbsp;with&nbsp;instance<br>
+checks.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Static methods defined here:<br>
+<dl><dt><a name="Any-__new__"><strong>__new__</strong></a>(cls, *args, **kwargs)</dt><dd><span class="code">Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="http://localhost:8000/builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="BinaryIO">class <strong>BinaryIO</strong></a>(<a href="typing.html#IO">IO</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">Typed&nbsp;version&nbsp;of&nbsp;the&nbsp;return&nbsp;of&nbsp;open()&nbsp;in&nbsp;binary&nbsp;mode.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="typing.html#BinaryIO">BinaryIO</a></dd>
+<dd><a href="typing.html#IO">IO</a></dd>
+<dd><a href="typing.html#Generic">Generic</a></dd>
+<dd><a href="http://localhost:8000/builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="BinaryIO-__enter__"><strong>__enter__</strong></a>(self) -&gt; 'BinaryIO'</dt></dl>
+
+<dl><dt><a name="BinaryIO-write"><strong>write</strong></a>(self, s: Union[bytes, bytearray]) -&gt; int</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__annotations__</strong> = {}</dl>
+
+<dl><dt><strong>__orig_bases__</strong> = (typing.IO[bytes],)</dl>
+
+<dl><dt><strong>__parameters__</strong> = ()</dl>
+
+<hr>
+Methods inherited from <a href="typing.html#IO">IO</a>:<br>
+<dl><dt><a name="BinaryIO-__exit__"><strong>__exit__</strong></a>(self, type, value, traceback) -&gt; None</dt></dl>
+
+<dl><dt><a name="BinaryIO-close"><strong>close</strong></a>(self) -&gt; None</dt></dl>
+
+<dl><dt><a name="BinaryIO-fileno"><strong>fileno</strong></a>(self) -&gt; int</dt></dl>
+
+<dl><dt><a name="BinaryIO-flush"><strong>flush</strong></a>(self) -&gt; None</dt></dl>
+
+<dl><dt><a name="BinaryIO-isatty"><strong>isatty</strong></a>(self) -&gt; bool</dt></dl>
+
+<dl><dt><a name="BinaryIO-read"><strong>read</strong></a>(self, n: int = -1) -&gt; ~AnyStr</dt></dl>
+
+<dl><dt><a name="BinaryIO-readable"><strong>readable</strong></a>(self) -&gt; bool</dt></dl>
+
+<dl><dt><a name="BinaryIO-readline"><strong>readline</strong></a>(self, limit: int = -1) -&gt; ~AnyStr</dt></dl>
+
+<dl><dt><a name="BinaryIO-readlines"><strong>readlines</strong></a>(self, hint: int = -1) -&gt; List[~AnyStr]</dt></dl>
+
+<dl><dt><a name="BinaryIO-seek"><strong>seek</strong></a>(self, offset: int, whence: int = 0) -&gt; int</dt></dl>
+
+<dl><dt><a name="BinaryIO-seekable"><strong>seekable</strong></a>(self) -&gt; bool</dt></dl>
+
+<dl><dt><a name="BinaryIO-tell"><strong>tell</strong></a>(self) -&gt; int</dt></dl>
+
+<dl><dt><a name="BinaryIO-truncate"><strong>truncate</strong></a>(self, size: int = None) -&gt; int</dt></dl>
+
+<dl><dt><a name="BinaryIO-writable"><strong>writable</strong></a>(self) -&gt; bool</dt></dl>
+
+<dl><dt><a name="BinaryIO-writelines"><strong>writelines</strong></a>(self, lines: List[~AnyStr]) -&gt; None</dt></dl>
+
+<hr>
+Readonly properties inherited from <a href="typing.html#IO">IO</a>:<br>
+<dl><dt><strong>closed</strong></dt>
+</dl>
+<dl><dt><strong>mode</strong></dt>
+</dl>
+<dl><dt><strong>name</strong></dt>
+</dl>
+<hr>
+Class methods inherited from <a href="typing.html#Generic">Generic</a>:<br>
+<dl><dt><a name="BinaryIO-__class_getitem__"><strong>__class_getitem__</strong></a>(...)</dt><dd><span class="code">Parameterizes&nbsp;a&nbsp;generic&nbsp;class.<br>
+&nbsp;<br>
+At&nbsp;least,&nbsp;parameterizing&nbsp;a&nbsp;generic&nbsp;class&nbsp;is&nbsp;the&nbsp;*main*&nbsp;thing&nbsp;this<br>
+method&nbsp;does.&nbsp;For&nbsp;example,&nbsp;for&nbsp;some&nbsp;generic&nbsp;class&nbsp;`Foo`,&nbsp;this&nbsp;is&nbsp;called<br>
+when&nbsp;we&nbsp;do&nbsp;`Foo[int]`&nbsp;-&nbsp;there,&nbsp;with&nbsp;`cls=Foo`&nbsp;and&nbsp;`params=int`.<br>
+&nbsp;<br>
+However,&nbsp;note&nbsp;that&nbsp;this&nbsp;method&nbsp;is&nbsp;also&nbsp;called&nbsp;when&nbsp;defining&nbsp;generic<br>
+classes&nbsp;in&nbsp;the&nbsp;first&nbsp;place&nbsp;with&nbsp;`class&nbsp;Foo[T]:&nbsp;...`.</span></dd></dl>
+
+<dl><dt><a name="BinaryIO-__init_subclass__"><strong>__init_subclass__</strong></a>(...)</dt><dd><span class="code">Function&nbsp;to&nbsp;initialize&nbsp;subclasses.</span></dd></dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="ForwardRef">class <strong>ForwardRef</strong></a>(<a href="typing.html#_Final">_Final</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="typing.html#ForwardRef">ForwardRef</a>(arg,&nbsp;is_argument=True,&nbsp;module=None,&nbsp;*,&nbsp;is_class=False)<br>
+&nbsp;<br>
+Internal&nbsp;wrapper&nbsp;to&nbsp;hold&nbsp;a&nbsp;forward&nbsp;reference.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="typing.html#ForwardRef">ForwardRef</a></dd>
+<dd><a href="typing.html#_Final">_Final</a></dd>
+<dd><a href="http://localhost:8000/builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ForwardRef-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><span class="code">Return&nbsp;self==value.</span></dd></dl>
+
+<dl><dt><a name="ForwardRef-__hash__"><strong>__hash__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;hash(self).</span></dd></dl>
+
+<dl><dt><a name="ForwardRef-__init__"><strong>__init__</strong></a>(self, arg, is_argument=True, module=None, *, is_class=False)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="ForwardRef-__or__"><strong>__or__</strong></a>(self, other)</dt><dd><span class="code">Return&nbsp;self|value.</span></dd></dl>
+
+<dl><dt><a name="ForwardRef-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<dl><dt><a name="ForwardRef-__ror__"><strong>__ror__</strong></a>(self, other)</dt><dd><span class="code">Return&nbsp;value|self.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__forward_arg__</strong></dt>
+</dl>
+<dl><dt><strong>__forward_code__</strong></dt>
+</dl>
+<dl><dt><strong>__forward_evaluated__</strong></dt>
+</dl>
+<dl><dt><strong>__forward_is_argument__</strong></dt>
+</dl>
+<dl><dt><strong>__forward_is_class__</strong></dt>
+</dl>
+<dl><dt><strong>__forward_module__</strong></dt>
+</dl>
+<dl><dt><strong>__forward_value__</strong></dt>
+</dl>
+<hr>
+Class methods inherited from <a href="typing.html#_Final">_Final</a>:<br>
+<dl><dt><a name="ForwardRef-__init_subclass__"><strong>__init_subclass__</strong></a>(*args, **kwds)</dt><dd><span class="code">This&nbsp;method&nbsp;is&nbsp;called&nbsp;when&nbsp;a&nbsp;class&nbsp;is&nbsp;subclassed.<br>
+&nbsp;<br>
+The&nbsp;default&nbsp;implementation&nbsp;does&nbsp;nothing.&nbsp;It&nbsp;may&nbsp;be<br>
+overridden&nbsp;to&nbsp;extend&nbsp;subclasses.</span></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="typing.html#_Final">_Final</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Generic">class <strong>Generic</strong></a>(<a href="http://localhost:8000/builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">Abstract&nbsp;base&nbsp;class&nbsp;for&nbsp;generic&nbsp;types.<br>
+&nbsp;<br>
+On&nbsp;Python&nbsp;3.12&nbsp;and&nbsp;newer,&nbsp;generic&nbsp;classes&nbsp;implicitly&nbsp;inherit&nbsp;from<br>
+<a href="typing.html#Generic">Generic</a>&nbsp;when&nbsp;they&nbsp;declare&nbsp;a&nbsp;parameter&nbsp;list&nbsp;after&nbsp;the&nbsp;class's&nbsp;name::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Mapping[KT,&nbsp;VT]:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;__getitem__(self,&nbsp;key:&nbsp;KT)&nbsp;-&gt;&nbsp;VT:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Etc.<br>
+&nbsp;<br>
+On&nbsp;older&nbsp;versions&nbsp;of&nbsp;Python,&nbsp;however,&nbsp;generic&nbsp;classes&nbsp;have&nbsp;to<br>
+explicitly&nbsp;inherit&nbsp;from&nbsp;<a href="typing.html#Generic">Generic</a>.<br>
+&nbsp;<br>
+After&nbsp;a&nbsp;class&nbsp;has&nbsp;been&nbsp;declared&nbsp;to&nbsp;be&nbsp;generic,&nbsp;it&nbsp;can&nbsp;then&nbsp;be&nbsp;used&nbsp;as<br>
+follows::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;lookup_name[KT,&nbsp;VT](mapping:&nbsp;Mapping[KT,&nbsp;VT],&nbsp;key:&nbsp;KT,&nbsp;default:&nbsp;VT)&nbsp;-&gt;&nbsp;VT:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;mapping[key]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;except&nbsp;KeyError:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;default<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Class methods defined here:<br>
+<dl><dt><a name="Generic-__class_getitem__"><strong>__class_getitem__</strong></a>(...)</dt><dd><span class="code">Parameterizes&nbsp;a&nbsp;generic&nbsp;class.<br>
+&nbsp;<br>
+At&nbsp;least,&nbsp;parameterizing&nbsp;a&nbsp;generic&nbsp;class&nbsp;is&nbsp;the&nbsp;*main*&nbsp;thing&nbsp;this<br>
+method&nbsp;does.&nbsp;For&nbsp;example,&nbsp;for&nbsp;some&nbsp;generic&nbsp;class&nbsp;`Foo`,&nbsp;this&nbsp;is&nbsp;called<br>
+when&nbsp;we&nbsp;do&nbsp;`Foo[int]`&nbsp;-&nbsp;there,&nbsp;with&nbsp;`cls=Foo`&nbsp;and&nbsp;`params=int`.<br>
+&nbsp;<br>
+However,&nbsp;note&nbsp;that&nbsp;this&nbsp;method&nbsp;is&nbsp;also&nbsp;called&nbsp;when&nbsp;defining&nbsp;generic<br>
+classes&nbsp;in&nbsp;the&nbsp;first&nbsp;place&nbsp;with&nbsp;`class&nbsp;Foo[T]:&nbsp;...`.</span></dd></dl>
+
+<dl><dt><a name="Generic-__init_subclass__"><strong>__init_subclass__</strong></a>(...)</dt><dd><span class="code">Function&nbsp;to&nbsp;initialize&nbsp;subclasses.</span></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__annotations__</strong> = {}</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="IO">class <strong>IO</strong></a>(<a href="typing.html#Generic">Generic</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="typing.html#Generic">Generic</a>&nbsp;base&nbsp;class&nbsp;for&nbsp;<a href="typing.html#TextIO">TextIO</a>&nbsp;and&nbsp;<a href="typing.html#BinaryIO">BinaryIO</a>.<br>
+&nbsp;<br>
+This&nbsp;is&nbsp;an&nbsp;abstract,&nbsp;generic&nbsp;version&nbsp;of&nbsp;the&nbsp;return&nbsp;of&nbsp;open().<br>
+&nbsp;<br>
+NOTE:&nbsp;This&nbsp;does&nbsp;not&nbsp;distinguish&nbsp;between&nbsp;the&nbsp;different&nbsp;possible<br>
+classes&nbsp;(text&nbsp;vs.&nbsp;binary,&nbsp;read&nbsp;vs.&nbsp;write&nbsp;vs.&nbsp;read/write,<br>
+append-only,&nbsp;unbuffered).&nbsp;&nbsp;The&nbsp;<a href="typing.html#TextIO">TextIO</a>&nbsp;and&nbsp;<a href="typing.html#BinaryIO">BinaryIO</a>&nbsp;subclasses<br>
+below&nbsp;capture&nbsp;the&nbsp;distinctions&nbsp;between&nbsp;text&nbsp;vs.&nbsp;binary,&nbsp;which&nbsp;is<br>
+pervasive&nbsp;in&nbsp;the&nbsp;interface;&nbsp;however&nbsp;we&nbsp;currently&nbsp;do&nbsp;not&nbsp;offer&nbsp;a<br>
+way&nbsp;to&nbsp;track&nbsp;the&nbsp;other&nbsp;distinctions&nbsp;in&nbsp;the&nbsp;type&nbsp;system.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="typing.html#IO">IO</a></dd>
+<dd><a href="typing.html#Generic">Generic</a></dd>
+<dd><a href="http://localhost:8000/builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="IO-__enter__"><strong>__enter__</strong></a>(self) -&gt; 'IO[AnyStr]'</dt></dl>
+
+<dl><dt><a name="IO-__exit__"><strong>__exit__</strong></a>(self, type, value, traceback) -&gt; None</dt></dl>
+
+<dl><dt><a name="IO-close"><strong>close</strong></a>(self) -&gt; None</dt></dl>
+
+<dl><dt><a name="IO-fileno"><strong>fileno</strong></a>(self) -&gt; int</dt></dl>
+
+<dl><dt><a name="IO-flush"><strong>flush</strong></a>(self) -&gt; None</dt></dl>
+
+<dl><dt><a name="IO-isatty"><strong>isatty</strong></a>(self) -&gt; bool</dt></dl>
+
+<dl><dt><a name="IO-read"><strong>read</strong></a>(self, n: int = -1) -&gt; ~AnyStr</dt></dl>
+
+<dl><dt><a name="IO-readable"><strong>readable</strong></a>(self) -&gt; bool</dt></dl>
+
+<dl><dt><a name="IO-readline"><strong>readline</strong></a>(self, limit: int = -1) -&gt; ~AnyStr</dt></dl>
+
+<dl><dt><a name="IO-readlines"><strong>readlines</strong></a>(self, hint: int = -1) -&gt; List[~AnyStr]</dt></dl>
+
+<dl><dt><a name="IO-seek"><strong>seek</strong></a>(self, offset: int, whence: int = 0) -&gt; int</dt></dl>
+
+<dl><dt><a name="IO-seekable"><strong>seekable</strong></a>(self) -&gt; bool</dt></dl>
+
+<dl><dt><a name="IO-tell"><strong>tell</strong></a>(self) -&gt; int</dt></dl>
+
+<dl><dt><a name="IO-truncate"><strong>truncate</strong></a>(self, size: int = None) -&gt; int</dt></dl>
+
+<dl><dt><a name="IO-writable"><strong>writable</strong></a>(self) -&gt; bool</dt></dl>
+
+<dl><dt><a name="IO-write"><strong>write</strong></a>(self, s: ~AnyStr) -&gt; int</dt></dl>
+
+<dl><dt><a name="IO-writelines"><strong>writelines</strong></a>(self, lines: List[~AnyStr]) -&gt; None</dt></dl>
+
+<hr>
+Readonly properties defined here:<br>
+<dl><dt><strong>closed</strong></dt>
+</dl>
+<dl><dt><strong>mode</strong></dt>
+</dl>
+<dl><dt><strong>name</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__annotations__</strong> = {}</dl>
+
+<dl><dt><strong>__orig_bases__</strong> = (typing.Generic[~AnyStr],)</dl>
+
+<dl><dt><strong>__parameters__</strong> = (~AnyStr,)</dl>
+
+<hr>
+Class methods inherited from <a href="typing.html#Generic">Generic</a>:<br>
+<dl><dt><a name="IO-__class_getitem__"><strong>__class_getitem__</strong></a>(...)</dt><dd><span class="code">Parameterizes&nbsp;a&nbsp;generic&nbsp;class.<br>
+&nbsp;<br>
+At&nbsp;least,&nbsp;parameterizing&nbsp;a&nbsp;generic&nbsp;class&nbsp;is&nbsp;the&nbsp;*main*&nbsp;thing&nbsp;this<br>
+method&nbsp;does.&nbsp;For&nbsp;example,&nbsp;for&nbsp;some&nbsp;generic&nbsp;class&nbsp;`Foo`,&nbsp;this&nbsp;is&nbsp;called<br>
+when&nbsp;we&nbsp;do&nbsp;`Foo[int]`&nbsp;-&nbsp;there,&nbsp;with&nbsp;`cls=Foo`&nbsp;and&nbsp;`params=int`.<br>
+&nbsp;<br>
+However,&nbsp;note&nbsp;that&nbsp;this&nbsp;method&nbsp;is&nbsp;also&nbsp;called&nbsp;when&nbsp;defining&nbsp;generic<br>
+classes&nbsp;in&nbsp;the&nbsp;first&nbsp;place&nbsp;with&nbsp;`class&nbsp;Foo[T]:&nbsp;...`.</span></dd></dl>
+
+<dl><dt><a name="IO-__init_subclass__"><strong>__init_subclass__</strong></a>(...)</dt><dd><span class="code">Function&nbsp;to&nbsp;initialize&nbsp;subclasses.</span></dd></dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="NewType">class <strong>NewType</strong></a>(<a href="http://localhost:8000/builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="typing.html#NewType">NewType</a>(name,&nbsp;tp)<br>
+&nbsp;<br>
+<a href="typing.html#NewType">NewType</a>&nbsp;creates&nbsp;simple&nbsp;unique&nbsp;types&nbsp;with&nbsp;almost&nbsp;zero&nbsp;runtime&nbsp;overhead.<br>
+&nbsp;<br>
+<a href="typing.html#NewType">NewType</a>(name,&nbsp;tp)&nbsp;is&nbsp;considered&nbsp;a&nbsp;subtype&nbsp;of&nbsp;tp<br>
+by&nbsp;static&nbsp;type&nbsp;checkers.&nbsp;At&nbsp;runtime,&nbsp;<a href="typing.html#NewType">NewType</a>(name,&nbsp;tp)&nbsp;returns<br>
+a&nbsp;dummy&nbsp;callable&nbsp;that&nbsp;simply&nbsp;returns&nbsp;its&nbsp;argument.<br>
+&nbsp;<br>
+Usage::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;UserId&nbsp;=&nbsp;<a href="typing.html#NewType">NewType</a>('UserId',&nbsp;int)<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;name_by_id(user_id:&nbsp;UserId)&nbsp;-&gt;&nbsp;str:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;UserId('user')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Fails&nbsp;type&nbsp;check<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;name_by_id(42)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Fails&nbsp;type&nbsp;check<br>
+&nbsp;&nbsp;&nbsp;&nbsp;name_by_id(UserId(42))&nbsp;&nbsp;#&nbsp;OK<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;num&nbsp;=&nbsp;UserId(5)&nbsp;+&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;type:&nbsp;int<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="NewType-__init__"><strong>__init__</strong></a>(self, name, tp)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="NewType-__mro_entries__"><strong>__mro_entries__</strong></a>(self, bases)</dt></dl>
+
+<dl><dt><a name="NewType-__or__"><strong>__or__</strong></a>(self, other)</dt><dd><span class="code">Return&nbsp;self|value.</span></dd></dl>
+
+<dl><dt><a name="NewType-__reduce__"><strong>__reduce__</strong></a>(self)</dt><dd><span class="code">Helper&nbsp;for&nbsp;pickle.</span></dd></dl>
+
+<dl><dt><a name="NewType-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<dl><dt><a name="NewType-__ror__"><strong>__ror__</strong></a>(self, other)</dt><dd><span class="code">Return&nbsp;value|self.</span></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="NewType-__call__"><strong>__call__</strong></a> = _idfunc(x, /)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="ParamSpec">class <strong>ParamSpec</strong></a>(<a href="http://localhost:8000/builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">Parameter&nbsp;specification&nbsp;variable.<br>
+&nbsp;<br>
+The&nbsp;preferred&nbsp;way&nbsp;to&nbsp;construct&nbsp;a&nbsp;parameter&nbsp;specification&nbsp;is&nbsp;via&nbsp;the<br>
+dedicated&nbsp;syntax&nbsp;for&nbsp;generic&nbsp;functions,&nbsp;classes,&nbsp;and&nbsp;type&nbsp;aliases,<br>
+where&nbsp;the&nbsp;use&nbsp;of&nbsp;'**'&nbsp;creates&nbsp;a&nbsp;parameter&nbsp;specification::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;type&nbsp;IntFunc[**P]&nbsp;=&nbsp;Callable[P,&nbsp;int]<br>
+&nbsp;<br>
+The&nbsp;following&nbsp;syntax&nbsp;creates&nbsp;a&nbsp;parameter&nbsp;specification&nbsp;that&nbsp;defaults<br>
+to&nbsp;a&nbsp;callable&nbsp;accepting&nbsp;two&nbsp;positional-only&nbsp;arguments&nbsp;of&nbsp;types&nbsp;int<br>
+and&nbsp;str:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;type&nbsp;IntFuncDefault[**P&nbsp;=&nbsp;(int,&nbsp;str)]&nbsp;=&nbsp;Callable[P,&nbsp;int]<br>
+&nbsp;<br>
+For&nbsp;compatibility&nbsp;with&nbsp;Python&nbsp;3.11&nbsp;and&nbsp;earlier,&nbsp;<a href="typing.html#ParamSpec">ParamSpec</a>&nbsp;objects<br>
+can&nbsp;also&nbsp;be&nbsp;created&nbsp;as&nbsp;follows::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;P&nbsp;=&nbsp;<a href="typing.html#ParamSpec">ParamSpec</a>('P')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;DefaultP&nbsp;=&nbsp;<a href="typing.html#ParamSpec">ParamSpec</a>('DefaultP',&nbsp;default=(int,&nbsp;str))<br>
+&nbsp;<br>
+Parameter&nbsp;specification&nbsp;variables&nbsp;exist&nbsp;primarily&nbsp;for&nbsp;the&nbsp;benefit&nbsp;of<br>
+static&nbsp;type&nbsp;checkers.&nbsp;&nbsp;They&nbsp;are&nbsp;used&nbsp;to&nbsp;forward&nbsp;the&nbsp;parameter&nbsp;types&nbsp;of<br>
+one&nbsp;callable&nbsp;to&nbsp;another&nbsp;callable,&nbsp;a&nbsp;pattern&nbsp;commonly&nbsp;found&nbsp;in<br>
+higher-order&nbsp;functions&nbsp;and&nbsp;decorators.&nbsp;&nbsp;They&nbsp;are&nbsp;only&nbsp;valid&nbsp;when&nbsp;used<br>
+in&nbsp;``Concatenate``,&nbsp;or&nbsp;as&nbsp;the&nbsp;first&nbsp;argument&nbsp;to&nbsp;``Callable``,&nbsp;or&nbsp;as<br>
+parameters&nbsp;for&nbsp;user-defined&nbsp;Generics.&nbsp;See&nbsp;class&nbsp;<a href="typing.html#Generic">Generic</a>&nbsp;for&nbsp;more<br>
+information&nbsp;on&nbsp;generic&nbsp;types.<br>
+&nbsp;<br>
+An&nbsp;example&nbsp;for&nbsp;annotating&nbsp;a&nbsp;decorator::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;add_logging[**P,&nbsp;T](f:&nbsp;Callable[P,&nbsp;T])&nbsp;-&gt;&nbsp;Callable[P,&nbsp;T]:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''A&nbsp;type-safe&nbsp;decorator&nbsp;to&nbsp;add&nbsp;logging&nbsp;to&nbsp;a&nbsp;function.'''<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;inner(*args:&nbsp;P.args,&nbsp;**kwargs:&nbsp;P.kwargs)&nbsp;-&gt;&nbsp;T:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logging.info(f'{f.__name__}&nbsp;was&nbsp;called')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;f(*args,&nbsp;**kwargs)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;inner<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;@add_logging<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;add_two(x:&nbsp;float,&nbsp;y:&nbsp;float)&nbsp;-&gt;&nbsp;float:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'''Add&nbsp;two&nbsp;numbers&nbsp;together.'''<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;x&nbsp;+&nbsp;y<br>
+&nbsp;<br>
+Parameter&nbsp;specification&nbsp;variables&nbsp;can&nbsp;be&nbsp;introspected.&nbsp;e.g.::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;P&nbsp;=&nbsp;<a href="typing.html#ParamSpec">ParamSpec</a>("P")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;P.__name__<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'P'<br>
+&nbsp;<br>
+Note&nbsp;that&nbsp;only&nbsp;parameter&nbsp;specification&nbsp;variables&nbsp;defined&nbsp;in&nbsp;the&nbsp;global<br>
+scope&nbsp;can&nbsp;be&nbsp;pickled.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="ParamSpec-__mro_entries__"><strong>__mro_entries__</strong></a>(self, object, /)</dt></dl>
+
+<dl><dt><a name="ParamSpec-__or__"><strong>__or__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self|value.</span></dd></dl>
+
+<dl><dt><a name="ParamSpec-__reduce__"><strong>__reduce__</strong></a>(self, /)</dt><dd><span class="code">Helper&nbsp;for&nbsp;pickle.</span></dd></dl>
+
+<dl><dt><a name="ParamSpec-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<dl><dt><a name="ParamSpec-__ror__"><strong>__ror__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;value|self.</span></dd></dl>
+
+<dl><dt><a name="ParamSpec-__typing_prepare_subst__"><strong>__typing_prepare_subst__</strong></a>(self, alias, args, /)</dt></dl>
+
+<dl><dt><a name="ParamSpec-__typing_subst__"><strong>__typing_subst__</strong></a>(self, arg, /)</dt></dl>
+
+<dl><dt><a name="ParamSpec-has_default"><strong>has_default</strong></a>(self, /)</dt></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="ParamSpec-__new__"><strong>__new__</strong></a>(*args, **kwargs)</dt><dd><span class="code">Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="http://localhost:8000/builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__bound__</strong></dt>
+</dl>
+<dl><dt><strong>__contravariant__</strong></dt>
+</dl>
+<dl><dt><strong>__covariant__</strong></dt>
+</dl>
+<dl><dt><strong>__default__</strong></dt>
+<dd><span class="code">The&nbsp;default&nbsp;value&nbsp;for&nbsp;this&nbsp;ParamSpec.</span></dd>
+</dl>
+<dl><dt><strong>__infer_variance__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+<dd><span class="code">Represents&nbsp;positional&nbsp;arguments.</span></dd>
+</dl>
+<dl><dt><strong>kwargs</strong></dt>
+<dd><span class="code">Represents&nbsp;keyword&nbsp;arguments.</span></dd>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="ParamSpecArgs">class <strong>ParamSpecArgs</strong></a>(<a href="http://localhost:8000/builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">The&nbsp;args&nbsp;for&nbsp;a&nbsp;<a href="typing.html#ParamSpec">ParamSpec</a>&nbsp;<a href="http://localhost:8000/builtins.html#object">object</a>.<br>
+&nbsp;<br>
+Given&nbsp;a&nbsp;<a href="typing.html#ParamSpec">ParamSpec</a>&nbsp;<a href="http://localhost:8000/builtins.html#object">object</a>&nbsp;P,&nbsp;P.args&nbsp;is&nbsp;an&nbsp;instance&nbsp;of&nbsp;<a href="typing.html#ParamSpecArgs">ParamSpecArgs</a>.<br>
+&nbsp;<br>
+<a href="typing.html#ParamSpecArgs">ParamSpecArgs</a>&nbsp;objects&nbsp;have&nbsp;a&nbsp;reference&nbsp;back&nbsp;to&nbsp;their&nbsp;<a href="typing.html#ParamSpec">ParamSpec</a>::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;P&nbsp;=&nbsp;<a href="typing.html#ParamSpec">ParamSpec</a>("P")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;P.args.__origin__&nbsp;is&nbsp;P<br>
+&nbsp;&nbsp;&nbsp;&nbsp;True<br>
+&nbsp;<br>
+This&nbsp;type&nbsp;is&nbsp;meant&nbsp;for&nbsp;runtime&nbsp;introspection&nbsp;and&nbsp;has&nbsp;no&nbsp;special&nbsp;meaning<br>
+to&nbsp;static&nbsp;type&nbsp;checkers.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="ParamSpecArgs-__eq__"><strong>__eq__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self==value.</span></dd></dl>
+
+<dl><dt><a name="ParamSpecArgs-__ge__"><strong>__ge__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self&gt;=value.</span></dd></dl>
+
+<dl><dt><a name="ParamSpecArgs-__gt__"><strong>__gt__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self&gt;value.</span></dd></dl>
+
+<dl><dt><a name="ParamSpecArgs-__le__"><strong>__le__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self&lt;=value.</span></dd></dl>
+
+<dl><dt><a name="ParamSpecArgs-__lt__"><strong>__lt__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self&lt;value.</span></dd></dl>
+
+<dl><dt><a name="ParamSpecArgs-__mro_entries__"><strong>__mro_entries__</strong></a>(self, object, /)</dt></dl>
+
+<dl><dt><a name="ParamSpecArgs-__ne__"><strong>__ne__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self!=value.</span></dd></dl>
+
+<dl><dt><a name="ParamSpecArgs-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="ParamSpecArgs-__new__"><strong>__new__</strong></a>(*args, **kwargs)</dt><dd><span class="code">Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="http://localhost:8000/builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__origin__</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="ParamSpecKwargs">class <strong>ParamSpecKwargs</strong></a>(<a href="http://localhost:8000/builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">The&nbsp;kwargs&nbsp;for&nbsp;a&nbsp;<a href="typing.html#ParamSpec">ParamSpec</a>&nbsp;<a href="http://localhost:8000/builtins.html#object">object</a>.<br>
+&nbsp;<br>
+Given&nbsp;a&nbsp;<a href="typing.html#ParamSpec">ParamSpec</a>&nbsp;<a href="http://localhost:8000/builtins.html#object">object</a>&nbsp;P,&nbsp;P.kwargs&nbsp;is&nbsp;an&nbsp;instance&nbsp;of&nbsp;<a href="typing.html#ParamSpecKwargs">ParamSpecKwargs</a>.<br>
+&nbsp;<br>
+<a href="typing.html#ParamSpecKwargs">ParamSpecKwargs</a>&nbsp;objects&nbsp;have&nbsp;a&nbsp;reference&nbsp;back&nbsp;to&nbsp;their&nbsp;<a href="typing.html#ParamSpec">ParamSpec</a>::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;P&nbsp;=&nbsp;<a href="typing.html#ParamSpec">ParamSpec</a>("P")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;P.kwargs.__origin__&nbsp;is&nbsp;P<br>
+&nbsp;&nbsp;&nbsp;&nbsp;True<br>
+&nbsp;<br>
+This&nbsp;type&nbsp;is&nbsp;meant&nbsp;for&nbsp;runtime&nbsp;introspection&nbsp;and&nbsp;has&nbsp;no&nbsp;special&nbsp;meaning<br>
+to&nbsp;static&nbsp;type&nbsp;checkers.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="ParamSpecKwargs-__eq__"><strong>__eq__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self==value.</span></dd></dl>
+
+<dl><dt><a name="ParamSpecKwargs-__ge__"><strong>__ge__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self&gt;=value.</span></dd></dl>
+
+<dl><dt><a name="ParamSpecKwargs-__gt__"><strong>__gt__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self&gt;value.</span></dd></dl>
+
+<dl><dt><a name="ParamSpecKwargs-__le__"><strong>__le__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self&lt;=value.</span></dd></dl>
+
+<dl><dt><a name="ParamSpecKwargs-__lt__"><strong>__lt__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self&lt;value.</span></dd></dl>
+
+<dl><dt><a name="ParamSpecKwargs-__mro_entries__"><strong>__mro_entries__</strong></a>(self, object, /)</dt></dl>
+
+<dl><dt><a name="ParamSpecKwargs-__ne__"><strong>__ne__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self!=value.</span></dd></dl>
+
+<dl><dt><a name="ParamSpecKwargs-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="ParamSpecKwargs-__new__"><strong>__new__</strong></a>(*args, **kwargs)</dt><dd><span class="code">Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="http://localhost:8000/builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__origin__</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Protocol">class <strong>Protocol</strong></a>(<a href="typing.html#Generic">Generic</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">Base&nbsp;class&nbsp;for&nbsp;protocol&nbsp;classes.<br>
+&nbsp;<br>
+<a href="typing.html#Protocol">Protocol</a>&nbsp;classes&nbsp;are&nbsp;defined&nbsp;as::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Proto(<a href="typing.html#Protocol">Protocol</a>):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;meth(self)&nbsp;-&gt;&nbsp;int:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;<br>
+Such&nbsp;classes&nbsp;are&nbsp;primarily&nbsp;used&nbsp;with&nbsp;static&nbsp;type&nbsp;checkers&nbsp;that&nbsp;recognize<br>
+structural&nbsp;subtyping&nbsp;(static&nbsp;duck-typing).<br>
+&nbsp;<br>
+For&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;C:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;meth(self)&nbsp;-&gt;&nbsp;int:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;func(x:&nbsp;Proto)&nbsp;-&gt;&nbsp;int:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;x.meth()<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;func(C())&nbsp;&nbsp;#&nbsp;Passes&nbsp;static&nbsp;type&nbsp;check<br>
+&nbsp;<br>
+See&nbsp;<a href="https://peps.python.org/pep-0544/">PEP&nbsp;544</a>&nbsp;for&nbsp;details.&nbsp;<a href="typing.html#Protocol">Protocol</a>&nbsp;classes&nbsp;decorated&nbsp;with<br>
+@typing.runtime_checkable&nbsp;act&nbsp;as&nbsp;simple-minded&nbsp;runtime&nbsp;protocols&nbsp;that&nbsp;check<br>
+only&nbsp;the&nbsp;presence&nbsp;of&nbsp;given&nbsp;attributes,&nbsp;ignoring&nbsp;their&nbsp;type&nbsp;signatures.<br>
+<a href="typing.html#Protocol">Protocol</a>&nbsp;classes&nbsp;can&nbsp;be&nbsp;generic,&nbsp;they&nbsp;are&nbsp;defined&nbsp;as::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;GenProto[T](<a href="typing.html#Protocol">Protocol</a>):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;meth(self)&nbsp;-&gt;&nbsp;T:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="typing.html#Protocol">Protocol</a></dd>
+<dd><a href="typing.html#Generic">Generic</a></dd>
+<dd><a href="http://localhost:8000/builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="Protocol-__init_subclass__"><strong>__init_subclass__</strong></a>(*args, **kwargs)</dt><dd><span class="code">Function&nbsp;to&nbsp;initialize&nbsp;subclasses.</span></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset()</dl>
+
+<dl><dt><strong>__annotations__</strong> = {}</dl>
+
+<dl><dt><strong>__parameters__</strong> = ()</dl>
+
+<dl><dt><strong>__protocol_attrs__</strong> = set()</dl>
+
+<hr>
+Class methods inherited from <a href="typing.html#Generic">Generic</a>:<br>
+<dl><dt><a name="Protocol-__class_getitem__"><strong>__class_getitem__</strong></a>(...)</dt><dd><span class="code">Parameterizes&nbsp;a&nbsp;generic&nbsp;class.<br>
+&nbsp;<br>
+At&nbsp;least,&nbsp;parameterizing&nbsp;a&nbsp;generic&nbsp;class&nbsp;is&nbsp;the&nbsp;*main*&nbsp;thing&nbsp;this<br>
+method&nbsp;does.&nbsp;For&nbsp;example,&nbsp;for&nbsp;some&nbsp;generic&nbsp;class&nbsp;`Foo`,&nbsp;this&nbsp;is&nbsp;called<br>
+when&nbsp;we&nbsp;do&nbsp;`Foo[int]`&nbsp;-&nbsp;there,&nbsp;with&nbsp;`cls=Foo`&nbsp;and&nbsp;`params=int`.<br>
+&nbsp;<br>
+However,&nbsp;note&nbsp;that&nbsp;this&nbsp;method&nbsp;is&nbsp;also&nbsp;called&nbsp;when&nbsp;defining&nbsp;generic<br>
+classes&nbsp;in&nbsp;the&nbsp;first&nbsp;place&nbsp;with&nbsp;`class&nbsp;Foo[T]:&nbsp;...`.</span></dd></dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="SupportsAbs">class <strong>SupportsAbs</strong></a>(<a href="typing.html#Protocol">Protocol</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="typing.html#SupportsAbs">SupportsAbs</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+An&nbsp;ABC&nbsp;with&nbsp;one&nbsp;abstract&nbsp;method&nbsp;__abs__&nbsp;that&nbsp;is&nbsp;covariant&nbsp;in&nbsp;its&nbsp;return&nbsp;type.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="typing.html#SupportsAbs">SupportsAbs</a></dd>
+<dd><a href="typing.html#Protocol">Protocol</a></dd>
+<dd><a href="typing.html#Generic">Generic</a></dd>
+<dd><a href="http://localhost:8000/builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="SupportsAbs-__abs__"><strong>__abs__</strong></a>(self) -&gt; T</dt></dl>
+
+<dl><dt><a name="SupportsAbs-__init__"><strong>__init__</strong></a> = _no_init_or_replace_init(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="SupportsAbs-__subclasshook__"><strong>__subclasshook__</strong></a> = _proto_hook(other)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset({'__abs__'})</dl>
+
+<dl><dt><strong>__annotations__</strong> = {}</dl>
+
+<dl><dt><strong>__non_callable_proto_members__</strong> = set()</dl>
+
+<dl><dt><strong>__orig_bases__</strong> = (&lt;class 'typing.Protocol'&gt;, typing.Generic[T])</dl>
+
+<dl><dt><strong>__parameters__</strong> = (T,)</dl>
+
+<dl><dt><strong>__protocol_attrs__</strong> = {'__abs__'}</dl>
+
+<dl><dt><strong>__type_params__</strong> = (T,)</dl>
+
+<hr>
+Class methods inherited from <a href="typing.html#Protocol">Protocol</a>:<br>
+<dl><dt><a name="SupportsAbs-__init_subclass__"><strong>__init_subclass__</strong></a>(*args, **kwargs)</dt><dd><span class="code">Function&nbsp;to&nbsp;initialize&nbsp;subclasses.</span></dd></dl>
+
+<hr>
+Class methods inherited from <a href="typing.html#Generic">Generic</a>:<br>
+<dl><dt><a name="SupportsAbs-__class_getitem__"><strong>__class_getitem__</strong></a>(...)</dt><dd><span class="code">Parameterizes&nbsp;a&nbsp;generic&nbsp;class.<br>
+&nbsp;<br>
+At&nbsp;least,&nbsp;parameterizing&nbsp;a&nbsp;generic&nbsp;class&nbsp;is&nbsp;the&nbsp;*main*&nbsp;thing&nbsp;this<br>
+method&nbsp;does.&nbsp;For&nbsp;example,&nbsp;for&nbsp;some&nbsp;generic&nbsp;class&nbsp;`Foo`,&nbsp;this&nbsp;is&nbsp;called<br>
+when&nbsp;we&nbsp;do&nbsp;`Foo[int]`&nbsp;-&nbsp;there,&nbsp;with&nbsp;`cls=Foo`&nbsp;and&nbsp;`params=int`.<br>
+&nbsp;<br>
+However,&nbsp;note&nbsp;that&nbsp;this&nbsp;method&nbsp;is&nbsp;also&nbsp;called&nbsp;when&nbsp;defining&nbsp;generic<br>
+classes&nbsp;in&nbsp;the&nbsp;first&nbsp;place&nbsp;with&nbsp;`class&nbsp;Foo[T]:&nbsp;...`.</span></dd></dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="SupportsBytes">class <strong>SupportsBytes</strong></a>(<a href="typing.html#Protocol">Protocol</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="typing.html#SupportsBytes">SupportsBytes</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+An&nbsp;ABC&nbsp;with&nbsp;one&nbsp;abstract&nbsp;method&nbsp;__bytes__.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="typing.html#SupportsBytes">SupportsBytes</a></dd>
+<dd><a href="typing.html#Protocol">Protocol</a></dd>
+<dd><a href="typing.html#Generic">Generic</a></dd>
+<dd><a href="http://localhost:8000/builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="SupportsBytes-__bytes__"><strong>__bytes__</strong></a>(self) -&gt; bytes</dt></dl>
+
+<dl><dt><a name="SupportsBytes-__init__"><strong>__init__</strong></a> = _no_init_or_replace_init(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="SupportsBytes-__subclasshook__"><strong>__subclasshook__</strong></a> = _proto_hook(other)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset({'__bytes__'})</dl>
+
+<dl><dt><strong>__annotations__</strong> = {}</dl>
+
+<dl><dt><strong>__non_callable_proto_members__</strong> = set()</dl>
+
+<dl><dt><strong>__parameters__</strong> = ()</dl>
+
+<dl><dt><strong>__protocol_attrs__</strong> = {'__bytes__'}</dl>
+
+<hr>
+Class methods inherited from <a href="typing.html#Protocol">Protocol</a>:<br>
+<dl><dt><a name="SupportsBytes-__init_subclass__"><strong>__init_subclass__</strong></a>(*args, **kwargs)</dt><dd><span class="code">Function&nbsp;to&nbsp;initialize&nbsp;subclasses.</span></dd></dl>
+
+<hr>
+Class methods inherited from <a href="typing.html#Generic">Generic</a>:<br>
+<dl><dt><a name="SupportsBytes-__class_getitem__"><strong>__class_getitem__</strong></a>(...)</dt><dd><span class="code">Parameterizes&nbsp;a&nbsp;generic&nbsp;class.<br>
+&nbsp;<br>
+At&nbsp;least,&nbsp;parameterizing&nbsp;a&nbsp;generic&nbsp;class&nbsp;is&nbsp;the&nbsp;*main*&nbsp;thing&nbsp;this<br>
+method&nbsp;does.&nbsp;For&nbsp;example,&nbsp;for&nbsp;some&nbsp;generic&nbsp;class&nbsp;`Foo`,&nbsp;this&nbsp;is&nbsp;called<br>
+when&nbsp;we&nbsp;do&nbsp;`Foo[int]`&nbsp;-&nbsp;there,&nbsp;with&nbsp;`cls=Foo`&nbsp;and&nbsp;`params=int`.<br>
+&nbsp;<br>
+However,&nbsp;note&nbsp;that&nbsp;this&nbsp;method&nbsp;is&nbsp;also&nbsp;called&nbsp;when&nbsp;defining&nbsp;generic<br>
+classes&nbsp;in&nbsp;the&nbsp;first&nbsp;place&nbsp;with&nbsp;`class&nbsp;Foo[T]:&nbsp;...`.</span></dd></dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="SupportsComplex">class <strong>SupportsComplex</strong></a>(<a href="typing.html#Protocol">Protocol</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="typing.html#SupportsComplex">SupportsComplex</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+An&nbsp;ABC&nbsp;with&nbsp;one&nbsp;abstract&nbsp;method&nbsp;__complex__.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="typing.html#SupportsComplex">SupportsComplex</a></dd>
+<dd><a href="typing.html#Protocol">Protocol</a></dd>
+<dd><a href="typing.html#Generic">Generic</a></dd>
+<dd><a href="http://localhost:8000/builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="SupportsComplex-__complex__"><strong>__complex__</strong></a>(self) -&gt; complex</dt></dl>
+
+<dl><dt><a name="SupportsComplex-__init__"><strong>__init__</strong></a> = _no_init_or_replace_init(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="SupportsComplex-__subclasshook__"><strong>__subclasshook__</strong></a> = _proto_hook(other)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset({'__complex__'})</dl>
+
+<dl><dt><strong>__annotations__</strong> = {}</dl>
+
+<dl><dt><strong>__non_callable_proto_members__</strong> = set()</dl>
+
+<dl><dt><strong>__parameters__</strong> = ()</dl>
+
+<dl><dt><strong>__protocol_attrs__</strong> = {'__complex__'}</dl>
+
+<hr>
+Class methods inherited from <a href="typing.html#Protocol">Protocol</a>:<br>
+<dl><dt><a name="SupportsComplex-__init_subclass__"><strong>__init_subclass__</strong></a>(*args, **kwargs)</dt><dd><span class="code">Function&nbsp;to&nbsp;initialize&nbsp;subclasses.</span></dd></dl>
+
+<hr>
+Class methods inherited from <a href="typing.html#Generic">Generic</a>:<br>
+<dl><dt><a name="SupportsComplex-__class_getitem__"><strong>__class_getitem__</strong></a>(...)</dt><dd><span class="code">Parameterizes&nbsp;a&nbsp;generic&nbsp;class.<br>
+&nbsp;<br>
+At&nbsp;least,&nbsp;parameterizing&nbsp;a&nbsp;generic&nbsp;class&nbsp;is&nbsp;the&nbsp;*main*&nbsp;thing&nbsp;this<br>
+method&nbsp;does.&nbsp;For&nbsp;example,&nbsp;for&nbsp;some&nbsp;generic&nbsp;class&nbsp;`Foo`,&nbsp;this&nbsp;is&nbsp;called<br>
+when&nbsp;we&nbsp;do&nbsp;`Foo[int]`&nbsp;-&nbsp;there,&nbsp;with&nbsp;`cls=Foo`&nbsp;and&nbsp;`params=int`.<br>
+&nbsp;<br>
+However,&nbsp;note&nbsp;that&nbsp;this&nbsp;method&nbsp;is&nbsp;also&nbsp;called&nbsp;when&nbsp;defining&nbsp;generic<br>
+classes&nbsp;in&nbsp;the&nbsp;first&nbsp;place&nbsp;with&nbsp;`class&nbsp;Foo[T]:&nbsp;...`.</span></dd></dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="SupportsFloat">class <strong>SupportsFloat</strong></a>(<a href="typing.html#Protocol">Protocol</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="typing.html#SupportsFloat">SupportsFloat</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+An&nbsp;ABC&nbsp;with&nbsp;one&nbsp;abstract&nbsp;method&nbsp;__float__.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="typing.html#SupportsFloat">SupportsFloat</a></dd>
+<dd><a href="typing.html#Protocol">Protocol</a></dd>
+<dd><a href="typing.html#Generic">Generic</a></dd>
+<dd><a href="http://localhost:8000/builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="SupportsFloat-__float__"><strong>__float__</strong></a>(self) -&gt; float</dt></dl>
+
+<dl><dt><a name="SupportsFloat-__init__"><strong>__init__</strong></a> = _no_init_or_replace_init(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="SupportsFloat-__subclasshook__"><strong>__subclasshook__</strong></a> = _proto_hook(other)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset({'__float__'})</dl>
+
+<dl><dt><strong>__annotations__</strong> = {}</dl>
+
+<dl><dt><strong>__non_callable_proto_members__</strong> = set()</dl>
+
+<dl><dt><strong>__parameters__</strong> = ()</dl>
+
+<dl><dt><strong>__protocol_attrs__</strong> = {'__float__'}</dl>
+
+<hr>
+Class methods inherited from <a href="typing.html#Protocol">Protocol</a>:<br>
+<dl><dt><a name="SupportsFloat-__init_subclass__"><strong>__init_subclass__</strong></a>(*args, **kwargs)</dt><dd><span class="code">Function&nbsp;to&nbsp;initialize&nbsp;subclasses.</span></dd></dl>
+
+<hr>
+Class methods inherited from <a href="typing.html#Generic">Generic</a>:<br>
+<dl><dt><a name="SupportsFloat-__class_getitem__"><strong>__class_getitem__</strong></a>(...)</dt><dd><span class="code">Parameterizes&nbsp;a&nbsp;generic&nbsp;class.<br>
+&nbsp;<br>
+At&nbsp;least,&nbsp;parameterizing&nbsp;a&nbsp;generic&nbsp;class&nbsp;is&nbsp;the&nbsp;*main*&nbsp;thing&nbsp;this<br>
+method&nbsp;does.&nbsp;For&nbsp;example,&nbsp;for&nbsp;some&nbsp;generic&nbsp;class&nbsp;`Foo`,&nbsp;this&nbsp;is&nbsp;called<br>
+when&nbsp;we&nbsp;do&nbsp;`Foo[int]`&nbsp;-&nbsp;there,&nbsp;with&nbsp;`cls=Foo`&nbsp;and&nbsp;`params=int`.<br>
+&nbsp;<br>
+However,&nbsp;note&nbsp;that&nbsp;this&nbsp;method&nbsp;is&nbsp;also&nbsp;called&nbsp;when&nbsp;defining&nbsp;generic<br>
+classes&nbsp;in&nbsp;the&nbsp;first&nbsp;place&nbsp;with&nbsp;`class&nbsp;Foo[T]:&nbsp;...`.</span></dd></dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="SupportsIndex">class <strong>SupportsIndex</strong></a>(<a href="typing.html#Protocol">Protocol</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="typing.html#SupportsIndex">SupportsIndex</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+An&nbsp;ABC&nbsp;with&nbsp;one&nbsp;abstract&nbsp;method&nbsp;__index__.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="typing.html#SupportsIndex">SupportsIndex</a></dd>
+<dd><a href="typing.html#Protocol">Protocol</a></dd>
+<dd><a href="typing.html#Generic">Generic</a></dd>
+<dd><a href="http://localhost:8000/builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="SupportsIndex-__index__"><strong>__index__</strong></a>(self) -&gt; int</dt></dl>
+
+<dl><dt><a name="SupportsIndex-__init__"><strong>__init__</strong></a> = _no_init_or_replace_init(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="SupportsIndex-__subclasshook__"><strong>__subclasshook__</strong></a> = _proto_hook(other)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset({'__index__'})</dl>
+
+<dl><dt><strong>__annotations__</strong> = {}</dl>
+
+<dl><dt><strong>__non_callable_proto_members__</strong> = set()</dl>
+
+<dl><dt><strong>__parameters__</strong> = ()</dl>
+
+<dl><dt><strong>__protocol_attrs__</strong> = {'__index__'}</dl>
+
+<hr>
+Class methods inherited from <a href="typing.html#Protocol">Protocol</a>:<br>
+<dl><dt><a name="SupportsIndex-__init_subclass__"><strong>__init_subclass__</strong></a>(*args, **kwargs)</dt><dd><span class="code">Function&nbsp;to&nbsp;initialize&nbsp;subclasses.</span></dd></dl>
+
+<hr>
+Class methods inherited from <a href="typing.html#Generic">Generic</a>:<br>
+<dl><dt><a name="SupportsIndex-__class_getitem__"><strong>__class_getitem__</strong></a>(...)</dt><dd><span class="code">Parameterizes&nbsp;a&nbsp;generic&nbsp;class.<br>
+&nbsp;<br>
+At&nbsp;least,&nbsp;parameterizing&nbsp;a&nbsp;generic&nbsp;class&nbsp;is&nbsp;the&nbsp;*main*&nbsp;thing&nbsp;this<br>
+method&nbsp;does.&nbsp;For&nbsp;example,&nbsp;for&nbsp;some&nbsp;generic&nbsp;class&nbsp;`Foo`,&nbsp;this&nbsp;is&nbsp;called<br>
+when&nbsp;we&nbsp;do&nbsp;`Foo[int]`&nbsp;-&nbsp;there,&nbsp;with&nbsp;`cls=Foo`&nbsp;and&nbsp;`params=int`.<br>
+&nbsp;<br>
+However,&nbsp;note&nbsp;that&nbsp;this&nbsp;method&nbsp;is&nbsp;also&nbsp;called&nbsp;when&nbsp;defining&nbsp;generic<br>
+classes&nbsp;in&nbsp;the&nbsp;first&nbsp;place&nbsp;with&nbsp;`class&nbsp;Foo[T]:&nbsp;...`.</span></dd></dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="SupportsInt">class <strong>SupportsInt</strong></a>(<a href="typing.html#Protocol">Protocol</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="typing.html#SupportsInt">SupportsInt</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+An&nbsp;ABC&nbsp;with&nbsp;one&nbsp;abstract&nbsp;method&nbsp;__int__.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="typing.html#SupportsInt">SupportsInt</a></dd>
+<dd><a href="typing.html#Protocol">Protocol</a></dd>
+<dd><a href="typing.html#Generic">Generic</a></dd>
+<dd><a href="http://localhost:8000/builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="SupportsInt-__init__"><strong>__init__</strong></a> = _no_init_or_replace_init(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="SupportsInt-__int__"><strong>__int__</strong></a>(self) -&gt; int</dt></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="SupportsInt-__subclasshook__"><strong>__subclasshook__</strong></a> = _proto_hook(other)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset({'__int__'})</dl>
+
+<dl><dt><strong>__annotations__</strong> = {}</dl>
+
+<dl><dt><strong>__non_callable_proto_members__</strong> = set()</dl>
+
+<dl><dt><strong>__parameters__</strong> = ()</dl>
+
+<dl><dt><strong>__protocol_attrs__</strong> = {'__int__'}</dl>
+
+<hr>
+Class methods inherited from <a href="typing.html#Protocol">Protocol</a>:<br>
+<dl><dt><a name="SupportsInt-__init_subclass__"><strong>__init_subclass__</strong></a>(*args, **kwargs)</dt><dd><span class="code">Function&nbsp;to&nbsp;initialize&nbsp;subclasses.</span></dd></dl>
+
+<hr>
+Class methods inherited from <a href="typing.html#Generic">Generic</a>:<br>
+<dl><dt><a name="SupportsInt-__class_getitem__"><strong>__class_getitem__</strong></a>(...)</dt><dd><span class="code">Parameterizes&nbsp;a&nbsp;generic&nbsp;class.<br>
+&nbsp;<br>
+At&nbsp;least,&nbsp;parameterizing&nbsp;a&nbsp;generic&nbsp;class&nbsp;is&nbsp;the&nbsp;*main*&nbsp;thing&nbsp;this<br>
+method&nbsp;does.&nbsp;For&nbsp;example,&nbsp;for&nbsp;some&nbsp;generic&nbsp;class&nbsp;`Foo`,&nbsp;this&nbsp;is&nbsp;called<br>
+when&nbsp;we&nbsp;do&nbsp;`Foo[int]`&nbsp;-&nbsp;there,&nbsp;with&nbsp;`cls=Foo`&nbsp;and&nbsp;`params=int`.<br>
+&nbsp;<br>
+However,&nbsp;note&nbsp;that&nbsp;this&nbsp;method&nbsp;is&nbsp;also&nbsp;called&nbsp;when&nbsp;defining&nbsp;generic<br>
+classes&nbsp;in&nbsp;the&nbsp;first&nbsp;place&nbsp;with&nbsp;`class&nbsp;Foo[T]:&nbsp;...`.</span></dd></dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="SupportsRound">class <strong>SupportsRound</strong></a>(<a href="typing.html#Protocol">Protocol</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="typing.html#SupportsRound">SupportsRound</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+An&nbsp;ABC&nbsp;with&nbsp;one&nbsp;abstract&nbsp;method&nbsp;__round__&nbsp;that&nbsp;is&nbsp;covariant&nbsp;in&nbsp;its&nbsp;return&nbsp;type.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="typing.html#SupportsRound">SupportsRound</a></dd>
+<dd><a href="typing.html#Protocol">Protocol</a></dd>
+<dd><a href="typing.html#Generic">Generic</a></dd>
+<dd><a href="http://localhost:8000/builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="SupportsRound-__init__"><strong>__init__</strong></a> = _no_init_or_replace_init(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="SupportsRound-__round__"><strong>__round__</strong></a>(self, ndigits: int = 0) -&gt; T</dt></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="SupportsRound-__subclasshook__"><strong>__subclasshook__</strong></a> = _proto_hook(other)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset({'__round__'})</dl>
+
+<dl><dt><strong>__annotations__</strong> = {}</dl>
+
+<dl><dt><strong>__non_callable_proto_members__</strong> = set()</dl>
+
+<dl><dt><strong>__orig_bases__</strong> = (&lt;class 'typing.Protocol'&gt;, typing.Generic[T])</dl>
+
+<dl><dt><strong>__parameters__</strong> = (T,)</dl>
+
+<dl><dt><strong>__protocol_attrs__</strong> = {'__round__'}</dl>
+
+<dl><dt><strong>__type_params__</strong> = (T,)</dl>
+
+<hr>
+Class methods inherited from <a href="typing.html#Protocol">Protocol</a>:<br>
+<dl><dt><a name="SupportsRound-__init_subclass__"><strong>__init_subclass__</strong></a>(*args, **kwargs)</dt><dd><span class="code">Function&nbsp;to&nbsp;initialize&nbsp;subclasses.</span></dd></dl>
+
+<hr>
+Class methods inherited from <a href="typing.html#Generic">Generic</a>:<br>
+<dl><dt><a name="SupportsRound-__class_getitem__"><strong>__class_getitem__</strong></a>(...)</dt><dd><span class="code">Parameterizes&nbsp;a&nbsp;generic&nbsp;class.<br>
+&nbsp;<br>
+At&nbsp;least,&nbsp;parameterizing&nbsp;a&nbsp;generic&nbsp;class&nbsp;is&nbsp;the&nbsp;*main*&nbsp;thing&nbsp;this<br>
+method&nbsp;does.&nbsp;For&nbsp;example,&nbsp;for&nbsp;some&nbsp;generic&nbsp;class&nbsp;`Foo`,&nbsp;this&nbsp;is&nbsp;called<br>
+when&nbsp;we&nbsp;do&nbsp;`Foo[int]`&nbsp;-&nbsp;there,&nbsp;with&nbsp;`cls=Foo`&nbsp;and&nbsp;`params=int`.<br>
+&nbsp;<br>
+However,&nbsp;note&nbsp;that&nbsp;this&nbsp;method&nbsp;is&nbsp;also&nbsp;called&nbsp;when&nbsp;defining&nbsp;generic<br>
+classes&nbsp;in&nbsp;the&nbsp;first&nbsp;place&nbsp;with&nbsp;`class&nbsp;Foo[T]:&nbsp;...`.</span></dd></dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong>Text</strong> = <a name="Text">class str</a>(<a href="http://localhost:8000/builtins.html#object">object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">str(<a href="http://localhost:8000/builtins.html#object">object</a>='')&nbsp;-&gt;&nbsp;str<br>
+str(bytes_or_buffer[,&nbsp;encoding[,&nbsp;errors]])&nbsp;-&gt;&nbsp;str<br>
+&nbsp;<br>
+Create&nbsp;a&nbsp;new&nbsp;string&nbsp;<a href="http://localhost:8000/builtins.html#object">object</a>&nbsp;from&nbsp;the&nbsp;given&nbsp;<a href="http://localhost:8000/builtins.html#object">object</a>.&nbsp;If&nbsp;encoding&nbsp;or<br>
+errors&nbsp;is&nbsp;specified,&nbsp;then&nbsp;the&nbsp;<a href="http://localhost:8000/builtins.html#object">object</a>&nbsp;must&nbsp;expose&nbsp;a&nbsp;data&nbsp;buffer<br>
+that&nbsp;will&nbsp;be&nbsp;decoded&nbsp;using&nbsp;the&nbsp;given&nbsp;encoding&nbsp;and&nbsp;error&nbsp;handler.<br>
+Otherwise,&nbsp;returns&nbsp;the&nbsp;result&nbsp;of&nbsp;<a href="http://localhost:8000/builtins.html#object">object</a>.<a href="typing.html#Text-__str__">__str__</a>()&nbsp;(if&nbsp;defined)<br>
+or&nbsp;repr(<a href="http://localhost:8000/builtins.html#object">object</a>).<br>
+encoding&nbsp;defaults&nbsp;to&nbsp;'utf-8'.<br>
+errors&nbsp;defaults&nbsp;to&nbsp;'strict'.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="str-__add__"><strong>__add__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self+value.</span></dd></dl>
+
+<dl><dt><a name="str-__contains__"><strong>__contains__</strong></a>(self, key, /)</dt><dd><span class="code">Return&nbsp;bool(key&nbsp;in&nbsp;self).</span></dd></dl>
+
+<dl><dt><a name="str-__eq__"><strong>__eq__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self==value.</span></dd></dl>
+
+<dl><dt><a name="str-__format__"><strong>__format__</strong></a>(self, format_spec, /)</dt><dd><span class="code">Return&nbsp;a&nbsp;formatted&nbsp;version&nbsp;of&nbsp;the&nbsp;string&nbsp;as&nbsp;described&nbsp;by&nbsp;format_spec.</span></dd></dl>
+
+<dl><dt><a name="str-__ge__"><strong>__ge__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self&gt;=value.</span></dd></dl>
+
+<dl><dt><a name="str-__getitem__"><strong>__getitem__</strong></a>(self, key, /)</dt><dd><span class="code">Return&nbsp;self[key].</span></dd></dl>
+
+<dl><dt><a name="str-__getnewargs__"><strong>__getnewargs__</strong></a>(self, /)</dt></dl>
+
+<dl><dt><a name="str-__gt__"><strong>__gt__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self&gt;value.</span></dd></dl>
+
+<dl><dt><a name="str-__hash__"><strong>__hash__</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;hash(self).</span></dd></dl>
+
+<dl><dt><a name="str-__iter__"><strong>__iter__</strong></a>(self, /)</dt><dd><span class="code">Implement&nbsp;iter(self).</span></dd></dl>
+
+<dl><dt><a name="str-__le__"><strong>__le__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self&lt;=value.</span></dd></dl>
+
+<dl><dt><a name="str-__len__"><strong>__len__</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;len(self).</span></dd></dl>
+
+<dl><dt><a name="str-__lt__"><strong>__lt__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self&lt;value.</span></dd></dl>
+
+<dl><dt><a name="str-__mod__"><strong>__mod__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self%value.</span></dd></dl>
+
+<dl><dt><a name="str-__mul__"><strong>__mul__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self*value.</span></dd></dl>
+
+<dl><dt><a name="str-__ne__"><strong>__ne__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self!=value.</span></dd></dl>
+
+<dl><dt><a name="str-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<dl><dt><a name="str-__rmod__"><strong>__rmod__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;value%self.</span></dd></dl>
+
+<dl><dt><a name="str-__rmul__"><strong>__rmul__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;value*self.</span></dd></dl>
+
+<dl><dt><a name="str-__sizeof__"><strong>__sizeof__</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;the&nbsp;size&nbsp;of&nbsp;the&nbsp;string&nbsp;in&nbsp;memory,&nbsp;in&nbsp;bytes.</span></dd></dl>
+
+<dl><dt><a name="str-__str__"><strong>__str__</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;str(self).</span></dd></dl>
+
+<dl><dt><a name="str-capitalize"><strong>capitalize</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;a&nbsp;capitalized&nbsp;version&nbsp;of&nbsp;the&nbsp;string.<br>
+&nbsp;<br>
+More&nbsp;specifically,&nbsp;make&nbsp;the&nbsp;first&nbsp;character&nbsp;have&nbsp;upper&nbsp;case&nbsp;and&nbsp;the&nbsp;rest&nbsp;lower<br>
+case.</span></dd></dl>
+
+<dl><dt><a name="str-casefold"><strong>casefold</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;a&nbsp;version&nbsp;of&nbsp;the&nbsp;string&nbsp;suitable&nbsp;for&nbsp;caseless&nbsp;comparisons.</span></dd></dl>
+
+<dl><dt><a name="str-center"><strong>center</strong></a>(self, width, fillchar=' ', /)</dt><dd><span class="code">Return&nbsp;a&nbsp;centered&nbsp;string&nbsp;of&nbsp;length&nbsp;width.<br>
+&nbsp;<br>
+Padding&nbsp;is&nbsp;done&nbsp;using&nbsp;the&nbsp;specified&nbsp;fill&nbsp;character&nbsp;(default&nbsp;is&nbsp;a&nbsp;space).</span></dd></dl>
+
+<dl><dt><a name="str-count"><strong>count</strong></a>(self, sub[, start[, end]], /)</dt><dd><span class="code">Return&nbsp;the&nbsp;number&nbsp;of&nbsp;non-overlapping&nbsp;occurrences&nbsp;of&nbsp;substring&nbsp;sub&nbsp;in&nbsp;string&nbsp;S[start:end].<br>
+&nbsp;<br>
+Optional&nbsp;arguments&nbsp;start&nbsp;and&nbsp;end&nbsp;are&nbsp;interpreted&nbsp;as&nbsp;in&nbsp;slice&nbsp;notation.</span></dd></dl>
+
+<dl><dt><a name="str-encode"><strong>encode</strong></a>(self, /, encoding='utf-8', errors='strict')</dt><dd><span class="code">Encode&nbsp;the&nbsp;string&nbsp;using&nbsp;the&nbsp;codec&nbsp;registered&nbsp;for&nbsp;encoding.<br>
+&nbsp;<br>
+encoding<br>
+&nbsp;&nbsp;The&nbsp;encoding&nbsp;in&nbsp;which&nbsp;to&nbsp;encode&nbsp;the&nbsp;string.<br>
+errors<br>
+&nbsp;&nbsp;The&nbsp;error&nbsp;handling&nbsp;scheme&nbsp;to&nbsp;use&nbsp;for&nbsp;encoding&nbsp;errors.<br>
+&nbsp;&nbsp;The&nbsp;default&nbsp;is&nbsp;'strict'&nbsp;meaning&nbsp;that&nbsp;encoding&nbsp;errors&nbsp;raise&nbsp;a<br>
+&nbsp;&nbsp;UnicodeEncodeError.&nbsp;&nbsp;Other&nbsp;possible&nbsp;values&nbsp;are&nbsp;'ignore',&nbsp;'replace'&nbsp;and<br>
+&nbsp;&nbsp;'xmlcharrefreplace'&nbsp;as&nbsp;well&nbsp;as&nbsp;any&nbsp;other&nbsp;name&nbsp;registered&nbsp;with<br>
+&nbsp;&nbsp;codecs.register_error&nbsp;that&nbsp;can&nbsp;handle&nbsp;UnicodeEncodeErrors.</span></dd></dl>
+
+<dl><dt><a name="str-endswith"><strong>endswith</strong></a>(self, suffix[, start[, end]], /)</dt><dd><span class="code">Return&nbsp;True&nbsp;if&nbsp;the&nbsp;string&nbsp;ends&nbsp;with&nbsp;the&nbsp;specified&nbsp;suffix,&nbsp;False&nbsp;otherwise.<br>
+&nbsp;<br>
+suffix<br>
+&nbsp;&nbsp;A&nbsp;string&nbsp;or&nbsp;a&nbsp;tuple&nbsp;of&nbsp;strings&nbsp;to&nbsp;try.<br>
+start<br>
+&nbsp;&nbsp;Optional&nbsp;start&nbsp;position.&nbsp;Default:&nbsp;start&nbsp;of&nbsp;the&nbsp;string.<br>
+end<br>
+&nbsp;&nbsp;Optional&nbsp;stop&nbsp;position.&nbsp;Default:&nbsp;end&nbsp;of&nbsp;the&nbsp;string.</span></dd></dl>
+
+<dl><dt><a name="str-expandtabs"><strong>expandtabs</strong></a>(self, /, tabsize=8)</dt><dd><span class="code">Return&nbsp;a&nbsp;copy&nbsp;where&nbsp;all&nbsp;tab&nbsp;characters&nbsp;are&nbsp;expanded&nbsp;using&nbsp;spaces.<br>
+&nbsp;<br>
+If&nbsp;tabsize&nbsp;is&nbsp;not&nbsp;given,&nbsp;a&nbsp;tab&nbsp;size&nbsp;of&nbsp;8&nbsp;characters&nbsp;is&nbsp;assumed.</span></dd></dl>
+
+<dl><dt><a name="str-find"><strong>find</strong></a>(self, sub[, start[, end]], /)</dt><dd><span class="code">Return&nbsp;the&nbsp;lowest&nbsp;index&nbsp;in&nbsp;S&nbsp;where&nbsp;substring&nbsp;sub&nbsp;is&nbsp;found,&nbsp;such&nbsp;that&nbsp;sub&nbsp;is&nbsp;contained&nbsp;within&nbsp;S[start:end].<br>
+&nbsp;<br>
+Optional&nbsp;arguments&nbsp;start&nbsp;and&nbsp;end&nbsp;are&nbsp;interpreted&nbsp;as&nbsp;in&nbsp;slice&nbsp;notation.<br>
+Return&nbsp;-1&nbsp;on&nbsp;failure.</span></dd></dl>
+
+<dl><dt><a name="str-format"><strong>format</strong></a>(self, /, *args, **kwargs)</dt><dd><span class="code">Return&nbsp;a&nbsp;formatted&nbsp;version&nbsp;of&nbsp;the&nbsp;string,&nbsp;using&nbsp;substitutions&nbsp;from&nbsp;args&nbsp;and&nbsp;kwargs.<br>
+The&nbsp;substitutions&nbsp;are&nbsp;identified&nbsp;by&nbsp;braces&nbsp;('{'&nbsp;and&nbsp;'}').</span></dd></dl>
+
+<dl><dt><a name="str-format_map"><strong>format_map</strong></a>(self, mapping, /)</dt><dd><span class="code">Return&nbsp;a&nbsp;formatted&nbsp;version&nbsp;of&nbsp;the&nbsp;string,&nbsp;using&nbsp;substitutions&nbsp;from&nbsp;mapping.<br>
+The&nbsp;substitutions&nbsp;are&nbsp;identified&nbsp;by&nbsp;braces&nbsp;('{'&nbsp;and&nbsp;'}').</span></dd></dl>
+
+<dl><dt><a name="str-index"><strong>index</strong></a>(self, sub[, start[, end]], /)</dt><dd><span class="code">Return&nbsp;the&nbsp;lowest&nbsp;index&nbsp;in&nbsp;S&nbsp;where&nbsp;substring&nbsp;sub&nbsp;is&nbsp;found,&nbsp;such&nbsp;that&nbsp;sub&nbsp;is&nbsp;contained&nbsp;within&nbsp;S[start:end].<br>
+&nbsp;<br>
+Optional&nbsp;arguments&nbsp;start&nbsp;and&nbsp;end&nbsp;are&nbsp;interpreted&nbsp;as&nbsp;in&nbsp;slice&nbsp;notation.<br>
+Raises&nbsp;ValueError&nbsp;when&nbsp;the&nbsp;substring&nbsp;is&nbsp;not&nbsp;found.</span></dd></dl>
+
+<dl><dt><a name="str-isalnum"><strong>isalnum</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;True&nbsp;if&nbsp;the&nbsp;string&nbsp;is&nbsp;an&nbsp;alpha-numeric&nbsp;string,&nbsp;False&nbsp;otherwise.<br>
+&nbsp;<br>
+A&nbsp;string&nbsp;is&nbsp;alpha-numeric&nbsp;if&nbsp;all&nbsp;characters&nbsp;in&nbsp;the&nbsp;string&nbsp;are&nbsp;alpha-numeric&nbsp;and<br>
+there&nbsp;is&nbsp;at&nbsp;least&nbsp;one&nbsp;character&nbsp;in&nbsp;the&nbsp;string.</span></dd></dl>
+
+<dl><dt><a name="str-isalpha"><strong>isalpha</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;True&nbsp;if&nbsp;the&nbsp;string&nbsp;is&nbsp;an&nbsp;alphabetic&nbsp;string,&nbsp;False&nbsp;otherwise.<br>
+&nbsp;<br>
+A&nbsp;string&nbsp;is&nbsp;alphabetic&nbsp;if&nbsp;all&nbsp;characters&nbsp;in&nbsp;the&nbsp;string&nbsp;are&nbsp;alphabetic&nbsp;and&nbsp;there<br>
+is&nbsp;at&nbsp;least&nbsp;one&nbsp;character&nbsp;in&nbsp;the&nbsp;string.</span></dd></dl>
+
+<dl><dt><a name="str-isascii"><strong>isascii</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;True&nbsp;if&nbsp;all&nbsp;characters&nbsp;in&nbsp;the&nbsp;string&nbsp;are&nbsp;ASCII,&nbsp;False&nbsp;otherwise.<br>
+&nbsp;<br>
+ASCII&nbsp;characters&nbsp;have&nbsp;code&nbsp;points&nbsp;in&nbsp;the&nbsp;range&nbsp;U+0000-U+007F.<br>
+Empty&nbsp;string&nbsp;is&nbsp;ASCII&nbsp;too.</span></dd></dl>
+
+<dl><dt><a name="str-isdecimal"><strong>isdecimal</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;True&nbsp;if&nbsp;the&nbsp;string&nbsp;is&nbsp;a&nbsp;decimal&nbsp;string,&nbsp;False&nbsp;otherwise.<br>
+&nbsp;<br>
+A&nbsp;string&nbsp;is&nbsp;a&nbsp;decimal&nbsp;string&nbsp;if&nbsp;all&nbsp;characters&nbsp;in&nbsp;the&nbsp;string&nbsp;are&nbsp;decimal&nbsp;and<br>
+there&nbsp;is&nbsp;at&nbsp;least&nbsp;one&nbsp;character&nbsp;in&nbsp;the&nbsp;string.</span></dd></dl>
+
+<dl><dt><a name="str-isdigit"><strong>isdigit</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;True&nbsp;if&nbsp;the&nbsp;string&nbsp;is&nbsp;a&nbsp;digit&nbsp;string,&nbsp;False&nbsp;otherwise.<br>
+&nbsp;<br>
+A&nbsp;string&nbsp;is&nbsp;a&nbsp;digit&nbsp;string&nbsp;if&nbsp;all&nbsp;characters&nbsp;in&nbsp;the&nbsp;string&nbsp;are&nbsp;digits&nbsp;and&nbsp;there<br>
+is&nbsp;at&nbsp;least&nbsp;one&nbsp;character&nbsp;in&nbsp;the&nbsp;string.</span></dd></dl>
+
+<dl><dt><a name="str-isidentifier"><strong>isidentifier</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;True&nbsp;if&nbsp;the&nbsp;string&nbsp;is&nbsp;a&nbsp;valid&nbsp;Python&nbsp;identifier,&nbsp;False&nbsp;otherwise.<br>
+&nbsp;<br>
+Call&nbsp;keyword.iskeyword(s)&nbsp;to&nbsp;test&nbsp;whether&nbsp;string&nbsp;s&nbsp;is&nbsp;a&nbsp;reserved&nbsp;identifier,<br>
+such&nbsp;as&nbsp;"def"&nbsp;or&nbsp;"class".</span></dd></dl>
+
+<dl><dt><a name="str-islower"><strong>islower</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;True&nbsp;if&nbsp;the&nbsp;string&nbsp;is&nbsp;a&nbsp;lowercase&nbsp;string,&nbsp;False&nbsp;otherwise.<br>
+&nbsp;<br>
+A&nbsp;string&nbsp;is&nbsp;lowercase&nbsp;if&nbsp;all&nbsp;cased&nbsp;characters&nbsp;in&nbsp;the&nbsp;string&nbsp;are&nbsp;lowercase&nbsp;and<br>
+there&nbsp;is&nbsp;at&nbsp;least&nbsp;one&nbsp;cased&nbsp;character&nbsp;in&nbsp;the&nbsp;string.</span></dd></dl>
+
+<dl><dt><a name="str-isnumeric"><strong>isnumeric</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;True&nbsp;if&nbsp;the&nbsp;string&nbsp;is&nbsp;a&nbsp;numeric&nbsp;string,&nbsp;False&nbsp;otherwise.<br>
+&nbsp;<br>
+A&nbsp;string&nbsp;is&nbsp;numeric&nbsp;if&nbsp;all&nbsp;characters&nbsp;in&nbsp;the&nbsp;string&nbsp;are&nbsp;numeric&nbsp;and&nbsp;there&nbsp;is&nbsp;at<br>
+least&nbsp;one&nbsp;character&nbsp;in&nbsp;the&nbsp;string.</span></dd></dl>
+
+<dl><dt><a name="str-isprintable"><strong>isprintable</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;True&nbsp;if&nbsp;the&nbsp;string&nbsp;is&nbsp;printable,&nbsp;False&nbsp;otherwise.<br>
+&nbsp;<br>
+A&nbsp;string&nbsp;is&nbsp;printable&nbsp;if&nbsp;all&nbsp;of&nbsp;its&nbsp;characters&nbsp;are&nbsp;considered&nbsp;printable&nbsp;in<br>
+repr()&nbsp;or&nbsp;if&nbsp;it&nbsp;is&nbsp;empty.</span></dd></dl>
+
+<dl><dt><a name="str-isspace"><strong>isspace</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;True&nbsp;if&nbsp;the&nbsp;string&nbsp;is&nbsp;a&nbsp;whitespace&nbsp;string,&nbsp;False&nbsp;otherwise.<br>
+&nbsp;<br>
+A&nbsp;string&nbsp;is&nbsp;whitespace&nbsp;if&nbsp;all&nbsp;characters&nbsp;in&nbsp;the&nbsp;string&nbsp;are&nbsp;whitespace&nbsp;and&nbsp;there<br>
+is&nbsp;at&nbsp;least&nbsp;one&nbsp;character&nbsp;in&nbsp;the&nbsp;string.</span></dd></dl>
+
+<dl><dt><a name="str-istitle"><strong>istitle</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;True&nbsp;if&nbsp;the&nbsp;string&nbsp;is&nbsp;a&nbsp;title-cased&nbsp;string,&nbsp;False&nbsp;otherwise.<br>
+&nbsp;<br>
+In&nbsp;a&nbsp;title-cased&nbsp;string,&nbsp;upper-&nbsp;and&nbsp;title-case&nbsp;characters&nbsp;may&nbsp;only<br>
+follow&nbsp;uncased&nbsp;characters&nbsp;and&nbsp;lowercase&nbsp;characters&nbsp;only&nbsp;cased&nbsp;ones.</span></dd></dl>
+
+<dl><dt><a name="str-isupper"><strong>isupper</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;True&nbsp;if&nbsp;the&nbsp;string&nbsp;is&nbsp;an&nbsp;uppercase&nbsp;string,&nbsp;False&nbsp;otherwise.<br>
+&nbsp;<br>
+A&nbsp;string&nbsp;is&nbsp;uppercase&nbsp;if&nbsp;all&nbsp;cased&nbsp;characters&nbsp;in&nbsp;the&nbsp;string&nbsp;are&nbsp;uppercase&nbsp;and<br>
+there&nbsp;is&nbsp;at&nbsp;least&nbsp;one&nbsp;cased&nbsp;character&nbsp;in&nbsp;the&nbsp;string.</span></dd></dl>
+
+<dl><dt><a name="str-join"><strong>join</strong></a>(self, iterable, /)</dt><dd><span class="code">Concatenate&nbsp;any&nbsp;number&nbsp;of&nbsp;strings.<br>
+&nbsp;<br>
+The&nbsp;string&nbsp;whose&nbsp;method&nbsp;is&nbsp;called&nbsp;is&nbsp;inserted&nbsp;in&nbsp;between&nbsp;each&nbsp;given&nbsp;string.<br>
+The&nbsp;result&nbsp;is&nbsp;returned&nbsp;as&nbsp;a&nbsp;new&nbsp;string.<br>
+&nbsp;<br>
+Example:&nbsp;'.'.<a href="typing.html#Text-join">join</a>(['ab',&nbsp;'pq',&nbsp;'rs'])&nbsp;-&gt;&nbsp;'ab.pq.rs'</span></dd></dl>
+
+<dl><dt><a name="str-ljust"><strong>ljust</strong></a>(self, width, fillchar=' ', /)</dt><dd><span class="code">Return&nbsp;a&nbsp;left-justified&nbsp;string&nbsp;of&nbsp;length&nbsp;width.<br>
+&nbsp;<br>
+Padding&nbsp;is&nbsp;done&nbsp;using&nbsp;the&nbsp;specified&nbsp;fill&nbsp;character&nbsp;(default&nbsp;is&nbsp;a&nbsp;space).</span></dd></dl>
+
+<dl><dt><a name="str-lower"><strong>lower</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;string&nbsp;converted&nbsp;to&nbsp;lowercase.</span></dd></dl>
+
+<dl><dt><a name="str-lstrip"><strong>lstrip</strong></a>(self, chars=None, /)</dt><dd><span class="code">Return&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;string&nbsp;with&nbsp;leading&nbsp;whitespace&nbsp;removed.<br>
+&nbsp;<br>
+If&nbsp;chars&nbsp;is&nbsp;given&nbsp;and&nbsp;not&nbsp;None,&nbsp;remove&nbsp;characters&nbsp;in&nbsp;chars&nbsp;instead.</span></dd></dl>
+
+<dl><dt><a name="str-partition"><strong>partition</strong></a>(self, sep, /)</dt><dd><span class="code">Partition&nbsp;the&nbsp;string&nbsp;into&nbsp;three&nbsp;parts&nbsp;using&nbsp;the&nbsp;given&nbsp;separator.<br>
+&nbsp;<br>
+This&nbsp;will&nbsp;search&nbsp;for&nbsp;the&nbsp;separator&nbsp;in&nbsp;the&nbsp;string.&nbsp;&nbsp;If&nbsp;the&nbsp;separator&nbsp;is&nbsp;found,<br>
+returns&nbsp;a&nbsp;3-tuple&nbsp;containing&nbsp;the&nbsp;part&nbsp;before&nbsp;the&nbsp;separator,&nbsp;the&nbsp;separator<br>
+itself,&nbsp;and&nbsp;the&nbsp;part&nbsp;after&nbsp;it.<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;separator&nbsp;is&nbsp;not&nbsp;found,&nbsp;returns&nbsp;a&nbsp;3-tuple&nbsp;containing&nbsp;the&nbsp;original&nbsp;string<br>
+and&nbsp;two&nbsp;empty&nbsp;strings.</span></dd></dl>
+
+<dl><dt><a name="str-removeprefix"><strong>removeprefix</strong></a>(self, prefix, /)</dt><dd><span class="code">Return&nbsp;a&nbsp;str&nbsp;with&nbsp;the&nbsp;given&nbsp;prefix&nbsp;string&nbsp;removed&nbsp;if&nbsp;present.<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;string&nbsp;starts&nbsp;with&nbsp;the&nbsp;prefix&nbsp;string,&nbsp;return&nbsp;string[len(prefix):].<br>
+Otherwise,&nbsp;return&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;original&nbsp;string.</span></dd></dl>
+
+<dl><dt><a name="str-removesuffix"><strong>removesuffix</strong></a>(self, suffix, /)</dt><dd><span class="code">Return&nbsp;a&nbsp;str&nbsp;with&nbsp;the&nbsp;given&nbsp;suffix&nbsp;string&nbsp;removed&nbsp;if&nbsp;present.<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;string&nbsp;ends&nbsp;with&nbsp;the&nbsp;suffix&nbsp;string&nbsp;and&nbsp;that&nbsp;suffix&nbsp;is&nbsp;not&nbsp;empty,<br>
+return&nbsp;string[:-len(suffix)].&nbsp;Otherwise,&nbsp;return&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;original<br>
+string.</span></dd></dl>
+
+<dl><dt><a name="str-replace"><strong>replace</strong></a>(self, old, new, /, count=-1)</dt><dd><span class="code">Return&nbsp;a&nbsp;copy&nbsp;with&nbsp;all&nbsp;occurrences&nbsp;of&nbsp;substring&nbsp;old&nbsp;replaced&nbsp;by&nbsp;new.<br>
+&nbsp;<br>
+&nbsp;&nbsp;count<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Maximum&nbsp;number&nbsp;of&nbsp;occurrences&nbsp;to&nbsp;replace.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-1&nbsp;(the&nbsp;default&nbsp;value)&nbsp;means&nbsp;replace&nbsp;all&nbsp;occurrences.<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;optional&nbsp;argument&nbsp;count&nbsp;is&nbsp;given,&nbsp;only&nbsp;the&nbsp;first&nbsp;count&nbsp;occurrences&nbsp;are<br>
+replaced.</span></dd></dl>
+
+<dl><dt><a name="str-rfind"><strong>rfind</strong></a>(self, sub[, start[, end]], /)</dt><dd><span class="code">Return&nbsp;the&nbsp;highest&nbsp;index&nbsp;in&nbsp;S&nbsp;where&nbsp;substring&nbsp;sub&nbsp;is&nbsp;found,&nbsp;such&nbsp;that&nbsp;sub&nbsp;is&nbsp;contained&nbsp;within&nbsp;S[start:end].<br>
+&nbsp;<br>
+Optional&nbsp;arguments&nbsp;start&nbsp;and&nbsp;end&nbsp;are&nbsp;interpreted&nbsp;as&nbsp;in&nbsp;slice&nbsp;notation.<br>
+Return&nbsp;-1&nbsp;on&nbsp;failure.</span></dd></dl>
+
+<dl><dt><a name="str-rindex"><strong>rindex</strong></a>(self, sub[, start[, end]], /)</dt><dd><span class="code">Return&nbsp;the&nbsp;highest&nbsp;index&nbsp;in&nbsp;S&nbsp;where&nbsp;substring&nbsp;sub&nbsp;is&nbsp;found,&nbsp;such&nbsp;that&nbsp;sub&nbsp;is&nbsp;contained&nbsp;within&nbsp;S[start:end].<br>
+&nbsp;<br>
+Optional&nbsp;arguments&nbsp;start&nbsp;and&nbsp;end&nbsp;are&nbsp;interpreted&nbsp;as&nbsp;in&nbsp;slice&nbsp;notation.<br>
+Raises&nbsp;ValueError&nbsp;when&nbsp;the&nbsp;substring&nbsp;is&nbsp;not&nbsp;found.</span></dd></dl>
+
+<dl><dt><a name="str-rjust"><strong>rjust</strong></a>(self, width, fillchar=' ', /)</dt><dd><span class="code">Return&nbsp;a&nbsp;right-justified&nbsp;string&nbsp;of&nbsp;length&nbsp;width.<br>
+&nbsp;<br>
+Padding&nbsp;is&nbsp;done&nbsp;using&nbsp;the&nbsp;specified&nbsp;fill&nbsp;character&nbsp;(default&nbsp;is&nbsp;a&nbsp;space).</span></dd></dl>
+
+<dl><dt><a name="str-rpartition"><strong>rpartition</strong></a>(self, sep, /)</dt><dd><span class="code">Partition&nbsp;the&nbsp;string&nbsp;into&nbsp;three&nbsp;parts&nbsp;using&nbsp;the&nbsp;given&nbsp;separator.<br>
+&nbsp;<br>
+This&nbsp;will&nbsp;search&nbsp;for&nbsp;the&nbsp;separator&nbsp;in&nbsp;the&nbsp;string,&nbsp;starting&nbsp;at&nbsp;the&nbsp;end.&nbsp;If<br>
+the&nbsp;separator&nbsp;is&nbsp;found,&nbsp;returns&nbsp;a&nbsp;3-tuple&nbsp;containing&nbsp;the&nbsp;part&nbsp;before&nbsp;the<br>
+separator,&nbsp;the&nbsp;separator&nbsp;itself,&nbsp;and&nbsp;the&nbsp;part&nbsp;after&nbsp;it.<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;separator&nbsp;is&nbsp;not&nbsp;found,&nbsp;returns&nbsp;a&nbsp;3-tuple&nbsp;containing&nbsp;two&nbsp;empty&nbsp;strings<br>
+and&nbsp;the&nbsp;original&nbsp;string.</span></dd></dl>
+
+<dl><dt><a name="str-rsplit"><strong>rsplit</strong></a>(self, /, sep=None, maxsplit=-1)</dt><dd><span class="code">Return&nbsp;a&nbsp;list&nbsp;of&nbsp;the&nbsp;substrings&nbsp;in&nbsp;the&nbsp;string,&nbsp;using&nbsp;sep&nbsp;as&nbsp;the&nbsp;separator&nbsp;string.<br>
+&nbsp;<br>
+&nbsp;&nbsp;sep<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;separator&nbsp;used&nbsp;to&nbsp;split&nbsp;the&nbsp;string.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;set&nbsp;to&nbsp;None&nbsp;(the&nbsp;default&nbsp;value),&nbsp;will&nbsp;split&nbsp;on&nbsp;any&nbsp;whitespace<br>
+&nbsp;&nbsp;&nbsp;&nbsp;character&nbsp;(including&nbsp;\n&nbsp;\r&nbsp;\t&nbsp;\f&nbsp;and&nbsp;spaces)&nbsp;and&nbsp;will&nbsp;discard<br>
+&nbsp;&nbsp;&nbsp;&nbsp;empty&nbsp;strings&nbsp;from&nbsp;the&nbsp;result.<br>
+&nbsp;&nbsp;maxsplit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Maximum&nbsp;number&nbsp;of&nbsp;splits.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-1&nbsp;(the&nbsp;default&nbsp;value)&nbsp;means&nbsp;no&nbsp;limit.<br>
+&nbsp;<br>
+Splitting&nbsp;starts&nbsp;at&nbsp;the&nbsp;end&nbsp;of&nbsp;the&nbsp;string&nbsp;and&nbsp;works&nbsp;to&nbsp;the&nbsp;front.</span></dd></dl>
+
+<dl><dt><a name="str-rstrip"><strong>rstrip</strong></a>(self, chars=None, /)</dt><dd><span class="code">Return&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;string&nbsp;with&nbsp;trailing&nbsp;whitespace&nbsp;removed.<br>
+&nbsp;<br>
+If&nbsp;chars&nbsp;is&nbsp;given&nbsp;and&nbsp;not&nbsp;None,&nbsp;remove&nbsp;characters&nbsp;in&nbsp;chars&nbsp;instead.</span></dd></dl>
+
+<dl><dt><a name="str-split"><strong>split</strong></a>(self, /, sep=None, maxsplit=-1)</dt><dd><span class="code">Return&nbsp;a&nbsp;list&nbsp;of&nbsp;the&nbsp;substrings&nbsp;in&nbsp;the&nbsp;string,&nbsp;using&nbsp;sep&nbsp;as&nbsp;the&nbsp;separator&nbsp;string.<br>
+&nbsp;<br>
+&nbsp;&nbsp;sep<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;separator&nbsp;used&nbsp;to&nbsp;split&nbsp;the&nbsp;string.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;set&nbsp;to&nbsp;None&nbsp;(the&nbsp;default&nbsp;value),&nbsp;will&nbsp;split&nbsp;on&nbsp;any&nbsp;whitespace<br>
+&nbsp;&nbsp;&nbsp;&nbsp;character&nbsp;(including&nbsp;\n&nbsp;\r&nbsp;\t&nbsp;\f&nbsp;and&nbsp;spaces)&nbsp;and&nbsp;will&nbsp;discard<br>
+&nbsp;&nbsp;&nbsp;&nbsp;empty&nbsp;strings&nbsp;from&nbsp;the&nbsp;result.<br>
+&nbsp;&nbsp;maxsplit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Maximum&nbsp;number&nbsp;of&nbsp;splits.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-1&nbsp;(the&nbsp;default&nbsp;value)&nbsp;means&nbsp;no&nbsp;limit.<br>
+&nbsp;<br>
+Splitting&nbsp;starts&nbsp;at&nbsp;the&nbsp;front&nbsp;of&nbsp;the&nbsp;string&nbsp;and&nbsp;works&nbsp;to&nbsp;the&nbsp;end.<br>
+&nbsp;<br>
+Note,&nbsp;str.<a href="typing.html#Text-split">split</a>()&nbsp;is&nbsp;mainly&nbsp;useful&nbsp;for&nbsp;data&nbsp;that&nbsp;has&nbsp;been&nbsp;intentionally<br>
+delimited.&nbsp;&nbsp;With&nbsp;natural&nbsp;text&nbsp;that&nbsp;includes&nbsp;punctuation,&nbsp;consider&nbsp;using<br>
+the&nbsp;regular&nbsp;expression&nbsp;module.</span></dd></dl>
+
+<dl><dt><a name="str-splitlines"><strong>splitlines</strong></a>(self, /, keepends=False)</dt><dd><span class="code">Return&nbsp;a&nbsp;list&nbsp;of&nbsp;the&nbsp;lines&nbsp;in&nbsp;the&nbsp;string,&nbsp;breaking&nbsp;at&nbsp;line&nbsp;boundaries.<br>
+&nbsp;<br>
+Line&nbsp;breaks&nbsp;are&nbsp;not&nbsp;included&nbsp;in&nbsp;the&nbsp;resulting&nbsp;list&nbsp;unless&nbsp;keepends&nbsp;is&nbsp;given&nbsp;and<br>
+true.</span></dd></dl>
+
+<dl><dt><a name="str-startswith"><strong>startswith</strong></a>(self, prefix[, start[, end]], /)</dt><dd><span class="code">Return&nbsp;True&nbsp;if&nbsp;the&nbsp;string&nbsp;starts&nbsp;with&nbsp;the&nbsp;specified&nbsp;prefix,&nbsp;False&nbsp;otherwise.<br>
+&nbsp;<br>
+prefix<br>
+&nbsp;&nbsp;A&nbsp;string&nbsp;or&nbsp;a&nbsp;tuple&nbsp;of&nbsp;strings&nbsp;to&nbsp;try.<br>
+start<br>
+&nbsp;&nbsp;Optional&nbsp;start&nbsp;position.&nbsp;Default:&nbsp;start&nbsp;of&nbsp;the&nbsp;string.<br>
+end<br>
+&nbsp;&nbsp;Optional&nbsp;stop&nbsp;position.&nbsp;Default:&nbsp;end&nbsp;of&nbsp;the&nbsp;string.</span></dd></dl>
+
+<dl><dt><a name="str-strip"><strong>strip</strong></a>(self, chars=None, /)</dt><dd><span class="code">Return&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;string&nbsp;with&nbsp;leading&nbsp;and&nbsp;trailing&nbsp;whitespace&nbsp;removed.<br>
+&nbsp;<br>
+If&nbsp;chars&nbsp;is&nbsp;given&nbsp;and&nbsp;not&nbsp;None,&nbsp;remove&nbsp;characters&nbsp;in&nbsp;chars&nbsp;instead.</span></dd></dl>
+
+<dl><dt><a name="str-swapcase"><strong>swapcase</strong></a>(self, /)</dt><dd><span class="code">Convert&nbsp;uppercase&nbsp;characters&nbsp;to&nbsp;lowercase&nbsp;and&nbsp;lowercase&nbsp;characters&nbsp;to&nbsp;uppercase.</span></dd></dl>
+
+<dl><dt><a name="str-title"><strong>title</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;a&nbsp;version&nbsp;of&nbsp;the&nbsp;string&nbsp;where&nbsp;each&nbsp;word&nbsp;is&nbsp;titlecased.<br>
+&nbsp;<br>
+More&nbsp;specifically,&nbsp;words&nbsp;start&nbsp;with&nbsp;uppercased&nbsp;characters&nbsp;and&nbsp;all&nbsp;remaining<br>
+cased&nbsp;characters&nbsp;have&nbsp;lower&nbsp;case.</span></dd></dl>
+
+<dl><dt><a name="str-translate"><strong>translate</strong></a>(self, table, /)</dt><dd><span class="code">Replace&nbsp;each&nbsp;character&nbsp;in&nbsp;the&nbsp;string&nbsp;using&nbsp;the&nbsp;given&nbsp;translation&nbsp;table.<br>
+&nbsp;<br>
+&nbsp;&nbsp;table<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Translation&nbsp;table,&nbsp;which&nbsp;must&nbsp;be&nbsp;a&nbsp;mapping&nbsp;of&nbsp;Unicode&nbsp;ordinals&nbsp;to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Unicode&nbsp;ordinals,&nbsp;strings,&nbsp;or&nbsp;None.<br>
+&nbsp;<br>
+The&nbsp;table&nbsp;must&nbsp;implement&nbsp;lookup/indexing&nbsp;via&nbsp;__getitem__,&nbsp;for&nbsp;instance&nbsp;a<br>
+dictionary&nbsp;or&nbsp;list.&nbsp;&nbsp;If&nbsp;this&nbsp;operation&nbsp;raises&nbsp;LookupError,&nbsp;the&nbsp;character&nbsp;is<br>
+left&nbsp;untouched.&nbsp;&nbsp;Characters&nbsp;mapped&nbsp;to&nbsp;None&nbsp;are&nbsp;deleted.</span></dd></dl>
+
+<dl><dt><a name="str-upper"><strong>upper</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;string&nbsp;converted&nbsp;to&nbsp;uppercase.</span></dd></dl>
+
+<dl><dt><a name="str-zfill"><strong>zfill</strong></a>(self, width, /)</dt><dd><span class="code">Pad&nbsp;a&nbsp;numeric&nbsp;string&nbsp;with&nbsp;zeros&nbsp;on&nbsp;the&nbsp;left,&nbsp;to&nbsp;fill&nbsp;a&nbsp;field&nbsp;of&nbsp;the&nbsp;given&nbsp;width.<br>
+&nbsp;<br>
+The&nbsp;string&nbsp;is&nbsp;never&nbsp;truncated.</span></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="str-__new__"><strong>__new__</strong></a>(*args, **kwargs)</dt><dd><span class="code">Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="http://localhost:8000/builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="str-maketrans"><strong>maketrans</strong></a>(x, y=&lt;unrepresentable&gt;, z=&lt;unrepresentable&gt;, /)</dt><dd><span class="code">Return&nbsp;a&nbsp;translation&nbsp;table&nbsp;usable&nbsp;for&nbsp;str.<a href="typing.html#Text-translate">translate</a>().<br>
+&nbsp;<br>
+If&nbsp;there&nbsp;is&nbsp;only&nbsp;one&nbsp;argument,&nbsp;it&nbsp;must&nbsp;be&nbsp;a&nbsp;dictionary&nbsp;mapping&nbsp;Unicode<br>
+ordinals&nbsp;(integers)&nbsp;or&nbsp;characters&nbsp;to&nbsp;Unicode&nbsp;ordinals,&nbsp;strings&nbsp;or&nbsp;None.<br>
+Character&nbsp;keys&nbsp;will&nbsp;be&nbsp;then&nbsp;converted&nbsp;to&nbsp;ordinals.<br>
+If&nbsp;there&nbsp;are&nbsp;two&nbsp;arguments,&nbsp;they&nbsp;must&nbsp;be&nbsp;strings&nbsp;of&nbsp;equal&nbsp;length,&nbsp;and<br>
+in&nbsp;the&nbsp;resulting&nbsp;dictionary,&nbsp;each&nbsp;character&nbsp;in&nbsp;x&nbsp;will&nbsp;be&nbsp;mapped&nbsp;to&nbsp;the<br>
+character&nbsp;at&nbsp;the&nbsp;same&nbsp;position&nbsp;in&nbsp;y.&nbsp;If&nbsp;there&nbsp;is&nbsp;a&nbsp;third&nbsp;argument,&nbsp;it<br>
+must&nbsp;be&nbsp;a&nbsp;string,&nbsp;whose&nbsp;characters&nbsp;will&nbsp;be&nbsp;mapped&nbsp;to&nbsp;None&nbsp;in&nbsp;the&nbsp;result.</span></dd></dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="TextIO">class <strong>TextIO</strong></a>(<a href="typing.html#IO">IO</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">Typed&nbsp;version&nbsp;of&nbsp;the&nbsp;return&nbsp;of&nbsp;open()&nbsp;in&nbsp;text&nbsp;mode.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="typing.html#TextIO">TextIO</a></dd>
+<dd><a href="typing.html#IO">IO</a></dd>
+<dd><a href="typing.html#Generic">Generic</a></dd>
+<dd><a href="http://localhost:8000/builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="TextIO-__enter__"><strong>__enter__</strong></a>(self) -&gt; 'TextIO'</dt></dl>
+
+<hr>
+Readonly properties defined here:<br>
+<dl><dt><strong>buffer</strong></dt>
+</dl>
+<dl><dt><strong>encoding</strong></dt>
+</dl>
+<dl><dt><strong>errors</strong></dt>
+</dl>
+<dl><dt><strong>line_buffering</strong></dt>
+</dl>
+<dl><dt><strong>newlines</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__annotations__</strong> = {}</dl>
+
+<dl><dt><strong>__orig_bases__</strong> = (typing.IO[str],)</dl>
+
+<dl><dt><strong>__parameters__</strong> = ()</dl>
+
+<hr>
+Methods inherited from <a href="typing.html#IO">IO</a>:<br>
+<dl><dt><a name="TextIO-__exit__"><strong>__exit__</strong></a>(self, type, value, traceback) -&gt; None</dt></dl>
+
+<dl><dt><a name="TextIO-close"><strong>close</strong></a>(self) -&gt; None</dt></dl>
+
+<dl><dt><a name="TextIO-fileno"><strong>fileno</strong></a>(self) -&gt; int</dt></dl>
+
+<dl><dt><a name="TextIO-flush"><strong>flush</strong></a>(self) -&gt; None</dt></dl>
+
+<dl><dt><a name="TextIO-isatty"><strong>isatty</strong></a>(self) -&gt; bool</dt></dl>
+
+<dl><dt><a name="TextIO-read"><strong>read</strong></a>(self, n: int = -1) -&gt; ~AnyStr</dt></dl>
+
+<dl><dt><a name="TextIO-readable"><strong>readable</strong></a>(self) -&gt; bool</dt></dl>
+
+<dl><dt><a name="TextIO-readline"><strong>readline</strong></a>(self, limit: int = -1) -&gt; ~AnyStr</dt></dl>
+
+<dl><dt><a name="TextIO-readlines"><strong>readlines</strong></a>(self, hint: int = -1) -&gt; List[~AnyStr]</dt></dl>
+
+<dl><dt><a name="TextIO-seek"><strong>seek</strong></a>(self, offset: int, whence: int = 0) -&gt; int</dt></dl>
+
+<dl><dt><a name="TextIO-seekable"><strong>seekable</strong></a>(self) -&gt; bool</dt></dl>
+
+<dl><dt><a name="TextIO-tell"><strong>tell</strong></a>(self) -&gt; int</dt></dl>
+
+<dl><dt><a name="TextIO-truncate"><strong>truncate</strong></a>(self, size: int = None) -&gt; int</dt></dl>
+
+<dl><dt><a name="TextIO-writable"><strong>writable</strong></a>(self) -&gt; bool</dt></dl>
+
+<dl><dt><a name="TextIO-write"><strong>write</strong></a>(self, s: ~AnyStr) -&gt; int</dt></dl>
+
+<dl><dt><a name="TextIO-writelines"><strong>writelines</strong></a>(self, lines: List[~AnyStr]) -&gt; None</dt></dl>
+
+<hr>
+Readonly properties inherited from <a href="typing.html#IO">IO</a>:<br>
+<dl><dt><strong>closed</strong></dt>
+</dl>
+<dl><dt><strong>mode</strong></dt>
+</dl>
+<dl><dt><strong>name</strong></dt>
+</dl>
+<hr>
+Class methods inherited from <a href="typing.html#Generic">Generic</a>:<br>
+<dl><dt><a name="TextIO-__class_getitem__"><strong>__class_getitem__</strong></a>(...)</dt><dd><span class="code">Parameterizes&nbsp;a&nbsp;generic&nbsp;class.<br>
+&nbsp;<br>
+At&nbsp;least,&nbsp;parameterizing&nbsp;a&nbsp;generic&nbsp;class&nbsp;is&nbsp;the&nbsp;*main*&nbsp;thing&nbsp;this<br>
+method&nbsp;does.&nbsp;For&nbsp;example,&nbsp;for&nbsp;some&nbsp;generic&nbsp;class&nbsp;`Foo`,&nbsp;this&nbsp;is&nbsp;called<br>
+when&nbsp;we&nbsp;do&nbsp;`Foo[int]`&nbsp;-&nbsp;there,&nbsp;with&nbsp;`cls=Foo`&nbsp;and&nbsp;`params=int`.<br>
+&nbsp;<br>
+However,&nbsp;note&nbsp;that&nbsp;this&nbsp;method&nbsp;is&nbsp;also&nbsp;called&nbsp;when&nbsp;defining&nbsp;generic<br>
+classes&nbsp;in&nbsp;the&nbsp;first&nbsp;place&nbsp;with&nbsp;`class&nbsp;Foo[T]:&nbsp;...`.</span></dd></dl>
+
+<dl><dt><a name="TextIO-__init_subclass__"><strong>__init_subclass__</strong></a>(...)</dt><dd><span class="code">Function&nbsp;to&nbsp;initialize&nbsp;subclasses.</span></dd></dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="TypeAliasType">class <strong>TypeAliasType</strong></a>(<a href="http://localhost:8000/builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">Type&nbsp;alias.<br>
+&nbsp;<br>
+Type&nbsp;aliases&nbsp;are&nbsp;created&nbsp;through&nbsp;the&nbsp;type&nbsp;statement::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;type&nbsp;Alias&nbsp;=&nbsp;int<br>
+&nbsp;<br>
+In&nbsp;this&nbsp;example,&nbsp;Alias&nbsp;and&nbsp;int&nbsp;will&nbsp;be&nbsp;treated&nbsp;equivalently&nbsp;by&nbsp;static<br>
+type&nbsp;checkers.<br>
+&nbsp;<br>
+At&nbsp;runtime,&nbsp;Alias&nbsp;is&nbsp;an&nbsp;instance&nbsp;of&nbsp;<a href="typing.html#TypeAliasType">TypeAliasType</a>.&nbsp;The&nbsp;__name__<br>
+attribute&nbsp;holds&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;type&nbsp;alias.&nbsp;The&nbsp;value&nbsp;of&nbsp;the&nbsp;type&nbsp;alias<br>
+is&nbsp;stored&nbsp;in&nbsp;the&nbsp;__value__&nbsp;attribute.&nbsp;It&nbsp;is&nbsp;evaluated&nbsp;lazily,&nbsp;so&nbsp;the<br>
+value&nbsp;is&nbsp;computed&nbsp;only&nbsp;if&nbsp;the&nbsp;attribute&nbsp;is&nbsp;accessed.<br>
+&nbsp;<br>
+Type&nbsp;aliases&nbsp;can&nbsp;also&nbsp;be&nbsp;generic::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;type&nbsp;ListOrSet[T]&nbsp;=&nbsp;list[T]&nbsp;|&nbsp;set[T]<br>
+&nbsp;<br>
+In&nbsp;this&nbsp;case,&nbsp;the&nbsp;type&nbsp;parameters&nbsp;of&nbsp;the&nbsp;alias&nbsp;are&nbsp;stored&nbsp;in&nbsp;the<br>
+__type_params__&nbsp;attribute.<br>
+&nbsp;<br>
+See&nbsp;<a href="https://peps.python.org/pep-0695/">PEP&nbsp;695</a>&nbsp;for&nbsp;more&nbsp;information.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="TypeAliasType-__getitem__"><strong>__getitem__</strong></a>(self, key, /)</dt><dd><span class="code">Return&nbsp;self[key].</span></dd></dl>
+
+<dl><dt><a name="TypeAliasType-__or__"><strong>__or__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self|value.</span></dd></dl>
+
+<dl><dt><a name="TypeAliasType-__reduce__"><strong>__reduce__</strong></a>(self, /)</dt><dd><span class="code">Helper&nbsp;for&nbsp;pickle.</span></dd></dl>
+
+<dl><dt><a name="TypeAliasType-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<dl><dt><a name="TypeAliasType-__ror__"><strong>__ror__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;value|self.</span></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="TypeAliasType-__new__"><strong>__new__</strong></a>(*args, **kwargs)</dt><dd><span class="code">Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="http://localhost:8000/builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__parameters__</strong></dt>
+</dl>
+<dl><dt><strong>__type_params__</strong></dt>
+</dl>
+<dl><dt><strong>__value__</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="TypeVar">class <strong>TypeVar</strong></a>(<a href="http://localhost:8000/builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">Type&nbsp;variable.<br>
+&nbsp;<br>
+The&nbsp;preferred&nbsp;way&nbsp;to&nbsp;construct&nbsp;a&nbsp;type&nbsp;variable&nbsp;is&nbsp;via&nbsp;the&nbsp;dedicated<br>
+syntax&nbsp;for&nbsp;generic&nbsp;functions,&nbsp;classes,&nbsp;and&nbsp;type&nbsp;aliases::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Sequence[T]:&nbsp;&nbsp;#&nbsp;T&nbsp;is&nbsp;a&nbsp;<a href="typing.html#TypeVar">TypeVar</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;<br>
+This&nbsp;syntax&nbsp;can&nbsp;also&nbsp;be&nbsp;used&nbsp;to&nbsp;create&nbsp;bound&nbsp;and&nbsp;constrained&nbsp;type<br>
+variables::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;S&nbsp;is&nbsp;a&nbsp;<a href="typing.html#TypeVar">TypeVar</a>&nbsp;bound&nbsp;to&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;StrSequence[S:&nbsp;str]:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;A&nbsp;is&nbsp;a&nbsp;<a href="typing.html#TypeVar">TypeVar</a>&nbsp;constrained&nbsp;to&nbsp;str&nbsp;or&nbsp;bytes<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;StrOrBytesSequence[A:&nbsp;(str,&nbsp;bytes)]:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;<br>
+Type&nbsp;variables&nbsp;can&nbsp;also&nbsp;have&nbsp;defaults:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;IntDefault[T&nbsp;=&nbsp;int]:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;<br>
+However,&nbsp;if&nbsp;desired,&nbsp;reusable&nbsp;type&nbsp;variables&nbsp;can&nbsp;also&nbsp;be&nbsp;constructed<br>
+manually,&nbsp;like&nbsp;so::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;T&nbsp;=&nbsp;<a href="typing.html#TypeVar">TypeVar</a>('T')&nbsp;&nbsp;#&nbsp;Can&nbsp;be&nbsp;anything<br>
+&nbsp;&nbsp;&nbsp;S&nbsp;=&nbsp;<a href="typing.html#TypeVar">TypeVar</a>('S',&nbsp;bound=str)&nbsp;&nbsp;#&nbsp;Can&nbsp;be&nbsp;any&nbsp;subtype&nbsp;of&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;A&nbsp;=&nbsp;<a href="typing.html#TypeVar">TypeVar</a>('A',&nbsp;str,&nbsp;bytes)&nbsp;&nbsp;#&nbsp;Must&nbsp;be&nbsp;exactly&nbsp;str&nbsp;or&nbsp;bytes<br>
+&nbsp;&nbsp;&nbsp;D&nbsp;=&nbsp;<a href="typing.html#TypeVar">TypeVar</a>('D',&nbsp;default=int)&nbsp;&nbsp;#&nbsp;Defaults&nbsp;to&nbsp;int<br>
+&nbsp;<br>
+Type&nbsp;variables&nbsp;exist&nbsp;primarily&nbsp;for&nbsp;the&nbsp;benefit&nbsp;of&nbsp;static&nbsp;type<br>
+checkers.&nbsp;&nbsp;They&nbsp;serve&nbsp;as&nbsp;the&nbsp;parameters&nbsp;for&nbsp;generic&nbsp;types&nbsp;as&nbsp;well<br>
+as&nbsp;for&nbsp;generic&nbsp;function&nbsp;and&nbsp;type&nbsp;alias&nbsp;definitions.<br>
+&nbsp;<br>
+The&nbsp;variance&nbsp;of&nbsp;type&nbsp;variables&nbsp;is&nbsp;inferred&nbsp;by&nbsp;type&nbsp;checkers&nbsp;when&nbsp;they<br>
+are&nbsp;created&nbsp;through&nbsp;the&nbsp;type&nbsp;parameter&nbsp;syntax&nbsp;and&nbsp;when<br>
+``infer_variance=True``&nbsp;is&nbsp;passed.&nbsp;Manually&nbsp;created&nbsp;type&nbsp;variables&nbsp;may<br>
+be&nbsp;explicitly&nbsp;marked&nbsp;covariant&nbsp;or&nbsp;contravariant&nbsp;by&nbsp;passing<br>
+``covariant=True``&nbsp;or&nbsp;``contravariant=True``.&nbsp;By&nbsp;default,&nbsp;manually<br>
+created&nbsp;type&nbsp;variables&nbsp;are&nbsp;invariant.&nbsp;See&nbsp;<a href="https://peps.python.org/pep-0484/">PEP&nbsp;484</a>&nbsp;and&nbsp;<a href="https://peps.python.org/pep-0695/">PEP&nbsp;695</a>&nbsp;for&nbsp;more<br>
+details.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="TypeVar-__mro_entries__"><strong>__mro_entries__</strong></a>(self, object, /)</dt></dl>
+
+<dl><dt><a name="TypeVar-__or__"><strong>__or__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;self|value.</span></dd></dl>
+
+<dl><dt><a name="TypeVar-__reduce__"><strong>__reduce__</strong></a>(self, /)</dt><dd><span class="code">Helper&nbsp;for&nbsp;pickle.</span></dd></dl>
+
+<dl><dt><a name="TypeVar-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<dl><dt><a name="TypeVar-__ror__"><strong>__ror__</strong></a>(self, value, /)</dt><dd><span class="code">Return&nbsp;value|self.</span></dd></dl>
+
+<dl><dt><a name="TypeVar-__typing_prepare_subst__"><strong>__typing_prepare_subst__</strong></a>(self, alias, args, /)</dt></dl>
+
+<dl><dt><a name="TypeVar-__typing_subst__"><strong>__typing_subst__</strong></a>(self, arg, /)</dt></dl>
+
+<dl><dt><a name="TypeVar-has_default"><strong>has_default</strong></a>(self, /)</dt></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="TypeVar-__new__"><strong>__new__</strong></a>(*args, **kwargs)</dt><dd><span class="code">Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="http://localhost:8000/builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__bound__</strong></dt>
+</dl>
+<dl><dt><strong>__constraints__</strong></dt>
+</dl>
+<dl><dt><strong>__contravariant__</strong></dt>
+</dl>
+<dl><dt><strong>__covariant__</strong></dt>
+</dl>
+<dl><dt><strong>__default__</strong></dt>
+</dl>
+<dl><dt><strong>__infer_variance__</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="TypeVarTuple">class <strong>TypeVarTuple</strong></a>(<a href="http://localhost:8000/builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">Type&nbsp;variable&nbsp;tuple.&nbsp;A&nbsp;specialized&nbsp;form&nbsp;of&nbsp;type&nbsp;variable&nbsp;that&nbsp;enables<br>
+variadic&nbsp;generics.<br>
+&nbsp;<br>
+The&nbsp;preferred&nbsp;way&nbsp;to&nbsp;construct&nbsp;a&nbsp;type&nbsp;variable&nbsp;tuple&nbsp;is&nbsp;via&nbsp;the<br>
+dedicated&nbsp;syntax&nbsp;for&nbsp;generic&nbsp;functions,&nbsp;classes,&nbsp;and&nbsp;type&nbsp;aliases,<br>
+where&nbsp;a&nbsp;single&nbsp;'*'&nbsp;indicates&nbsp;a&nbsp;type&nbsp;variable&nbsp;tuple::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;move_first_element_to_last[T,&nbsp;*Ts](tup:&nbsp;tuple[T,&nbsp;*Ts])&nbsp;-&gt;&nbsp;tuple[*Ts,&nbsp;T]:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;(*tup[1:],&nbsp;tup[0])<br>
+&nbsp;<br>
+Type&nbsp;variables&nbsp;tuples&nbsp;can&nbsp;have&nbsp;default&nbsp;values:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;type&nbsp;AliasWithDefault[*Ts&nbsp;=&nbsp;(str,&nbsp;int)]&nbsp;=&nbsp;tuple[*Ts]<br>
+&nbsp;<br>
+For&nbsp;compatibility&nbsp;with&nbsp;Python&nbsp;3.11&nbsp;and&nbsp;earlier,&nbsp;<a href="typing.html#TypeVarTuple">TypeVarTuple</a>&nbsp;objects<br>
+can&nbsp;also&nbsp;be&nbsp;created&nbsp;as&nbsp;follows::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Ts&nbsp;=&nbsp;<a href="typing.html#TypeVarTuple">TypeVarTuple</a>('Ts')&nbsp;&nbsp;#&nbsp;Can&nbsp;be&nbsp;given&nbsp;any&nbsp;name<br>
+&nbsp;&nbsp;&nbsp;&nbsp;DefaultTs&nbsp;=&nbsp;<a href="typing.html#TypeVarTuple">TypeVarTuple</a>('Ts',&nbsp;default=(str,&nbsp;int))<br>
+&nbsp;<br>
+Just&nbsp;as&nbsp;a&nbsp;<a href="typing.html#TypeVar">TypeVar</a>&nbsp;(type&nbsp;variable)&nbsp;is&nbsp;a&nbsp;placeholder&nbsp;for&nbsp;a&nbsp;single&nbsp;type,<br>
+a&nbsp;<a href="typing.html#TypeVarTuple">TypeVarTuple</a>&nbsp;is&nbsp;a&nbsp;placeholder&nbsp;for&nbsp;an&nbsp;*arbitrary*&nbsp;number&nbsp;of&nbsp;types.&nbsp;For<br>
+example,&nbsp;if&nbsp;we&nbsp;define&nbsp;a&nbsp;generic&nbsp;class&nbsp;using&nbsp;a&nbsp;<a href="typing.html#TypeVarTuple">TypeVarTuple</a>::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;C[*Ts]:&nbsp;...<br>
+&nbsp;<br>
+Then&nbsp;we&nbsp;can&nbsp;parameterize&nbsp;that&nbsp;class&nbsp;with&nbsp;an&nbsp;arbitrary&nbsp;number&nbsp;of&nbsp;type<br>
+arguments::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;C[int]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Fine<br>
+&nbsp;&nbsp;&nbsp;&nbsp;C[int,&nbsp;str]&nbsp;&nbsp;#&nbsp;Also&nbsp;fine<br>
+&nbsp;&nbsp;&nbsp;&nbsp;C[()]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Even&nbsp;this&nbsp;is&nbsp;fine<br>
+&nbsp;<br>
+For&nbsp;more&nbsp;details,&nbsp;see&nbsp;<a href="https://peps.python.org/pep-0646/">PEP&nbsp;646</a>.<br>
+&nbsp;<br>
+Note&nbsp;that&nbsp;only&nbsp;TypeVarTuples&nbsp;defined&nbsp;in&nbsp;the&nbsp;global&nbsp;scope&nbsp;can&nbsp;be<br>
+pickled.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="TypeVarTuple-__iter__"><strong>__iter__</strong></a>(self, /)</dt><dd><span class="code">Implement&nbsp;iter(self).</span></dd></dl>
+
+<dl><dt><a name="TypeVarTuple-__mro_entries__"><strong>__mro_entries__</strong></a>(self, object, /)</dt></dl>
+
+<dl><dt><a name="TypeVarTuple-__reduce__"><strong>__reduce__</strong></a>(self, /)</dt><dd><span class="code">Helper&nbsp;for&nbsp;pickle.</span></dd></dl>
+
+<dl><dt><a name="TypeVarTuple-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<dl><dt><a name="TypeVarTuple-__typing_prepare_subst__"><strong>__typing_prepare_subst__</strong></a>(self, alias, args, /)</dt></dl>
+
+<dl><dt><a name="TypeVarTuple-__typing_subst__"><strong>__typing_subst__</strong></a>(self, arg, /)</dt></dl>
+
+<dl><dt><a name="TypeVarTuple-has_default"><strong>has_default</strong></a>(self, /)</dt></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="TypeVarTuple-__new__"><strong>__new__</strong></a>(*args, **kwargs)</dt><dd><span class="code">Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="http://localhost:8000/builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__default__</strong></dt>
+<dd><span class="code">The&nbsp;default&nbsp;value&nbsp;for&nbsp;this&nbsp;TypeVarTuple.</span></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-NamedTuple"><strong>NamedTuple</strong></a>(typename, fields=&lt;sentinel&gt;, /, **kwargs)</dt><dd><span class="code">Typed&nbsp;version&nbsp;of&nbsp;namedtuple.<br>
+&nbsp;<br>
+Usage::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Employee(NamedTuple):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id:&nbsp;int<br>
+&nbsp;<br>
+This&nbsp;is&nbsp;equivalent&nbsp;to::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Employee&nbsp;=&nbsp;collections.namedtuple('Employee',&nbsp;['name',&nbsp;'id'])<br>
+&nbsp;<br>
+The&nbsp;resulting&nbsp;class&nbsp;has&nbsp;an&nbsp;extra&nbsp;__annotations__&nbsp;attribute,&nbsp;giving&nbsp;a<br>
+dict&nbsp;that&nbsp;maps&nbsp;field&nbsp;names&nbsp;to&nbsp;types.&nbsp;&nbsp;(The&nbsp;field&nbsp;names&nbsp;are&nbsp;also&nbsp;in<br>
+the&nbsp;_fields&nbsp;attribute,&nbsp;which&nbsp;is&nbsp;part&nbsp;of&nbsp;the&nbsp;namedtuple&nbsp;API.)<br>
+An&nbsp;alternative&nbsp;equivalent&nbsp;functional&nbsp;syntax&nbsp;is&nbsp;also&nbsp;accepted::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Employee&nbsp;=&nbsp;<a href="typing.html#-NamedTuple">NamedTuple</a>('Employee',&nbsp;[('name',&nbsp;str),&nbsp;('id',&nbsp;int)])</span></dd></dl>
+ <dl><dt><a name="-TypedDict"><strong>TypedDict</strong></a>(typename, fields=&lt;sentinel&gt;, /, *, total=True)</dt><dd><span class="code">A&nbsp;simple&nbsp;typed&nbsp;namespace.&nbsp;At&nbsp;runtime&nbsp;it&nbsp;is&nbsp;equivalent&nbsp;to&nbsp;a&nbsp;plain&nbsp;dict.<br>
+&nbsp;<br>
+TypedDict&nbsp;creates&nbsp;a&nbsp;dictionary&nbsp;type&nbsp;such&nbsp;that&nbsp;a&nbsp;type&nbsp;checker&nbsp;will&nbsp;expect&nbsp;all<br>
+instances&nbsp;to&nbsp;have&nbsp;a&nbsp;certain&nbsp;set&nbsp;of&nbsp;keys,&nbsp;where&nbsp;each&nbsp;key&nbsp;is<br>
+associated&nbsp;with&nbsp;a&nbsp;value&nbsp;of&nbsp;a&nbsp;consistent&nbsp;type.&nbsp;This&nbsp;expectation<br>
+is&nbsp;not&nbsp;checked&nbsp;at&nbsp;runtime.<br>
+&nbsp;<br>
+Usage::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;class&nbsp;Point2D(TypedDict):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;a:&nbsp;Point2D&nbsp;=&nbsp;{'x':&nbsp;1,&nbsp;'y':&nbsp;2,&nbsp;'label':&nbsp;'good'}&nbsp;&nbsp;#&nbsp;OK<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;b:&nbsp;Point2D&nbsp;=&nbsp;{'z':&nbsp;3,&nbsp;'label':&nbsp;'bad'}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Fails&nbsp;type&nbsp;check<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;Point2D(x=1,&nbsp;y=2,&nbsp;label='first')&nbsp;==&nbsp;dict(x=1,&nbsp;y=2,&nbsp;label='first')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;True<br>
+&nbsp;<br>
+The&nbsp;type&nbsp;info&nbsp;can&nbsp;be&nbsp;accessed&nbsp;via&nbsp;the&nbsp;Point2D.__annotations__&nbsp;dict,&nbsp;and<br>
+the&nbsp;Point2D.__required_keys__&nbsp;and&nbsp;Point2D.__optional_keys__&nbsp;frozensets.<br>
+TypedDict&nbsp;supports&nbsp;an&nbsp;additional&nbsp;equivalent&nbsp;form::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Point2D&nbsp;=&nbsp;<a href="typing.html#-TypedDict">TypedDict</a>('Point2D',&nbsp;{'x':&nbsp;int,&nbsp;'y':&nbsp;int,&nbsp;'label':&nbsp;str})<br>
+&nbsp;<br>
+By&nbsp;default,&nbsp;all&nbsp;keys&nbsp;must&nbsp;be&nbsp;present&nbsp;in&nbsp;a&nbsp;TypedDict.&nbsp;It&nbsp;is&nbsp;possible<br>
+to&nbsp;override&nbsp;this&nbsp;by&nbsp;specifying&nbsp;totality::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Point2D(TypedDict,&nbsp;total=False):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y:&nbsp;int<br>
+&nbsp;<br>
+This&nbsp;means&nbsp;that&nbsp;a&nbsp;Point2D&nbsp;TypedDict&nbsp;can&nbsp;have&nbsp;any&nbsp;of&nbsp;the&nbsp;keys&nbsp;omitted.&nbsp;A&nbsp;type<br>
+checker&nbsp;is&nbsp;only&nbsp;expected&nbsp;to&nbsp;support&nbsp;a&nbsp;literal&nbsp;False&nbsp;or&nbsp;True&nbsp;as&nbsp;the&nbsp;value&nbsp;of<br>
+the&nbsp;total&nbsp;argument.&nbsp;True&nbsp;is&nbsp;the&nbsp;default,&nbsp;and&nbsp;makes&nbsp;all&nbsp;items&nbsp;defined&nbsp;in&nbsp;the<br>
+class&nbsp;body&nbsp;be&nbsp;required.<br>
+&nbsp;<br>
+The&nbsp;Required&nbsp;and&nbsp;NotRequired&nbsp;special&nbsp;forms&nbsp;can&nbsp;also&nbsp;be&nbsp;used&nbsp;to&nbsp;mark<br>
+individual&nbsp;keys&nbsp;as&nbsp;being&nbsp;required&nbsp;or&nbsp;not&nbsp;required::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Point2D(TypedDict):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x:&nbsp;int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;the&nbsp;"x"&nbsp;key&nbsp;must&nbsp;always&nbsp;be&nbsp;present&nbsp;(Required&nbsp;is&nbsp;the&nbsp;default)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y:&nbsp;NotRequired[int]&nbsp;&nbsp;#&nbsp;the&nbsp;"y"&nbsp;key&nbsp;can&nbsp;be&nbsp;omitted<br>
+&nbsp;<br>
+See&nbsp;<a href="https://peps.python.org/pep-0655/">PEP&nbsp;655</a>&nbsp;for&nbsp;more&nbsp;details&nbsp;on&nbsp;Required&nbsp;and&nbsp;NotRequired.<br>
+&nbsp;<br>
+The&nbsp;ReadOnly&nbsp;special&nbsp;form&nbsp;can&nbsp;be&nbsp;used<br>
+to&nbsp;mark&nbsp;individual&nbsp;keys&nbsp;as&nbsp;immutable&nbsp;for&nbsp;type&nbsp;checkers::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;DatabaseUser(TypedDict):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id:&nbsp;ReadOnly[int]&nbsp;&nbsp;#&nbsp;the&nbsp;"id"&nbsp;key&nbsp;must&nbsp;not&nbsp;be&nbsp;modified<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;username:&nbsp;str&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;the&nbsp;"username"&nbsp;key&nbsp;can&nbsp;be&nbsp;changed</span></dd></dl>
+ <dl><dt><a name="-__getattr__"><strong>__getattr__</strong></a>(attr)</dt><dd><span class="code">Improve&nbsp;the&nbsp;import&nbsp;time&nbsp;of&nbsp;the&nbsp;typing&nbsp;module.<br>
+&nbsp;<br>
+Soft-deprecated&nbsp;objects&nbsp;which&nbsp;are&nbsp;costly&nbsp;to&nbsp;create<br>
+are&nbsp;only&nbsp;created&nbsp;on-demand&nbsp;here.</span></dd></dl>
+ <dl><dt><a name="-assert_never"><strong>assert_never</strong></a>(arg: Never, /) -&gt; Never</dt><dd><span class="code">Statically&nbsp;assert&nbsp;that&nbsp;a&nbsp;line&nbsp;of&nbsp;code&nbsp;is&nbsp;unreachable.<br>
+&nbsp;<br>
+Example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;int_or_str(arg:&nbsp;int&nbsp;|&nbsp;str)&nbsp;-&gt;&nbsp;None:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;match&nbsp;arg:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case&nbsp;int():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("It's&nbsp;an&nbsp;int")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case&nbsp;str():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("It's&nbsp;a&nbsp;str")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case&nbsp;_:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="typing.html#-assert_never">assert_never</a>(arg)<br>
+&nbsp;<br>
+If&nbsp;a&nbsp;type&nbsp;checker&nbsp;finds&nbsp;that&nbsp;a&nbsp;call&nbsp;to&nbsp;<a href="typing.html#-assert_never">assert_never</a>()&nbsp;is<br>
+reachable,&nbsp;it&nbsp;will&nbsp;emit&nbsp;an&nbsp;error.<br>
+&nbsp;<br>
+At&nbsp;runtime,&nbsp;this&nbsp;throws&nbsp;an&nbsp;exception&nbsp;when&nbsp;called.</span></dd></dl>
+ <dl><dt><a name="-assert_type"><strong>assert_type</strong></a>(val, typ, /)</dt><dd><span class="code">Ask&nbsp;a&nbsp;static&nbsp;type&nbsp;checker&nbsp;to&nbsp;confirm&nbsp;that&nbsp;the&nbsp;value&nbsp;is&nbsp;of&nbsp;the&nbsp;given&nbsp;type.<br>
+&nbsp;<br>
+At&nbsp;runtime&nbsp;this&nbsp;does&nbsp;nothing:&nbsp;it&nbsp;returns&nbsp;the&nbsp;first&nbsp;argument&nbsp;unchanged&nbsp;with&nbsp;no<br>
+checks&nbsp;or&nbsp;side&nbsp;effects,&nbsp;no&nbsp;matter&nbsp;the&nbsp;actual&nbsp;type&nbsp;of&nbsp;the&nbsp;argument.<br>
+&nbsp;<br>
+When&nbsp;a&nbsp;static&nbsp;type&nbsp;checker&nbsp;encounters&nbsp;a&nbsp;call&nbsp;to&nbsp;<a href="typing.html#-assert_type">assert_type</a>(),&nbsp;it<br>
+emits&nbsp;an&nbsp;error&nbsp;if&nbsp;the&nbsp;value&nbsp;is&nbsp;not&nbsp;of&nbsp;the&nbsp;specified&nbsp;type::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;greet(name:&nbsp;str)&nbsp;-&gt;&nbsp;None:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="typing.html#-assert_type">assert_type</a>(name,&nbsp;str)&nbsp;&nbsp;#&nbsp;OK<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="typing.html#-assert_type">assert_type</a>(name,&nbsp;int)&nbsp;&nbsp;#&nbsp;type&nbsp;checker&nbsp;error</span></dd></dl>
+ <dl><dt><a name="-cast"><strong>cast</strong></a>(typ, val)</dt><dd><span class="code">Cast&nbsp;a&nbsp;value&nbsp;to&nbsp;a&nbsp;type.<br>
+&nbsp;<br>
+This&nbsp;returns&nbsp;the&nbsp;value&nbsp;unchanged.&nbsp;&nbsp;To&nbsp;the&nbsp;type&nbsp;checker&nbsp;this<br>
+signals&nbsp;that&nbsp;the&nbsp;return&nbsp;value&nbsp;has&nbsp;the&nbsp;designated&nbsp;type,&nbsp;but&nbsp;at<br>
+runtime&nbsp;we&nbsp;intentionally&nbsp;don't&nbsp;check&nbsp;anything&nbsp;(we&nbsp;want&nbsp;this<br>
+to&nbsp;be&nbsp;as&nbsp;fast&nbsp;as&nbsp;possible).</span></dd></dl>
+ <dl><dt><a name="-clear_overloads"><strong>clear_overloads</strong></a>()</dt><dd><span class="code">Clear&nbsp;all&nbsp;overloads&nbsp;in&nbsp;the&nbsp;registry.</span></dd></dl>
+ <dl><dt><a name="-dataclass_transform"><strong>dataclass_transform</strong></a>(
+    *,
+    eq_default: bool = True,
+    order_default: bool = False,
+    kw_only_default: bool = False,
+    frozen_default: bool = False,
+    field_specifiers: tuple[typing.Union[type[typing.Any], typing.Callable[..., typing.Any]], ...] = (),
+    **kwargs: Any
+) -&gt; &lt;class '_IdentityCallable'&gt;</dt><dd><span class="code">Decorator&nbsp;to&nbsp;mark&nbsp;an&nbsp;<a href="http://localhost:8000/builtins.html#object">object</a>&nbsp;as&nbsp;providing&nbsp;dataclass-like&nbsp;behaviour.<br>
+&nbsp;<br>
+The&nbsp;decorator&nbsp;can&nbsp;be&nbsp;applied&nbsp;to&nbsp;a&nbsp;function,&nbsp;class,&nbsp;or&nbsp;metaclass.<br>
+&nbsp;<br>
+Example&nbsp;usage&nbsp;with&nbsp;a&nbsp;decorator&nbsp;function::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;@<a href="typing.html#-dataclass_transform">dataclass_transform</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;create_model[T](cls:&nbsp;type[T])&nbsp;-&gt;&nbsp;type[T]:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;cls<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;@create_model<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;CustomerModel:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name:&nbsp;str<br>
+&nbsp;<br>
+On&nbsp;a&nbsp;base&nbsp;class::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;@<a href="typing.html#-dataclass_transform">dataclass_transform</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;ModelBase:&nbsp;...<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;CustomerModel(ModelBase):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name:&nbsp;str<br>
+&nbsp;<br>
+On&nbsp;a&nbsp;metaclass::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;@<a href="typing.html#-dataclass_transform">dataclass_transform</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;ModelMeta(type):&nbsp;...<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;ModelBase(metaclass=ModelMeta):&nbsp;...<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;CustomerModel(ModelBase):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name:&nbsp;str<br>
+&nbsp;<br>
+The&nbsp;``CustomerModel``&nbsp;classes&nbsp;defined&nbsp;above&nbsp;will<br>
+be&nbsp;treated&nbsp;by&nbsp;type&nbsp;checkers&nbsp;similarly&nbsp;to&nbsp;classes&nbsp;created&nbsp;with<br>
+``@dataclasses.dataclass``.<br>
+For&nbsp;example,&nbsp;type&nbsp;checkers&nbsp;will&nbsp;assume&nbsp;these&nbsp;classes&nbsp;have<br>
+``__init__``&nbsp;methods&nbsp;that&nbsp;accept&nbsp;``id``&nbsp;and&nbsp;``name``.<br>
+&nbsp;<br>
+The&nbsp;arguments&nbsp;to&nbsp;this&nbsp;decorator&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;customize&nbsp;this&nbsp;behavior:<br>
+-&nbsp;``eq_default``&nbsp;indicates&nbsp;whether&nbsp;the&nbsp;``eq``&nbsp;parameter&nbsp;is&nbsp;assumed&nbsp;to&nbsp;be<br>
+&nbsp;&nbsp;&nbsp;&nbsp;``True``&nbsp;or&nbsp;``False``&nbsp;if&nbsp;it&nbsp;is&nbsp;omitted&nbsp;by&nbsp;the&nbsp;caller.<br>
+-&nbsp;``order_default``&nbsp;indicates&nbsp;whether&nbsp;the&nbsp;``order``&nbsp;parameter&nbsp;is<br>
+&nbsp;&nbsp;&nbsp;&nbsp;assumed&nbsp;to&nbsp;be&nbsp;True&nbsp;or&nbsp;False&nbsp;if&nbsp;it&nbsp;is&nbsp;omitted&nbsp;by&nbsp;the&nbsp;caller.<br>
+-&nbsp;``kw_only_default``&nbsp;indicates&nbsp;whether&nbsp;the&nbsp;``kw_only``&nbsp;parameter&nbsp;is<br>
+&nbsp;&nbsp;&nbsp;&nbsp;assumed&nbsp;to&nbsp;be&nbsp;True&nbsp;or&nbsp;False&nbsp;if&nbsp;it&nbsp;is&nbsp;omitted&nbsp;by&nbsp;the&nbsp;caller.<br>
+-&nbsp;``frozen_default``&nbsp;indicates&nbsp;whether&nbsp;the&nbsp;``frozen``&nbsp;parameter&nbsp;is<br>
+&nbsp;&nbsp;&nbsp;&nbsp;assumed&nbsp;to&nbsp;be&nbsp;True&nbsp;or&nbsp;False&nbsp;if&nbsp;it&nbsp;is&nbsp;omitted&nbsp;by&nbsp;the&nbsp;caller.<br>
+-&nbsp;``field_specifiers``&nbsp;specifies&nbsp;a&nbsp;static&nbsp;list&nbsp;of&nbsp;supported&nbsp;classes<br>
+&nbsp;&nbsp;&nbsp;&nbsp;or&nbsp;functions&nbsp;that&nbsp;describe&nbsp;fields,&nbsp;similar&nbsp;to&nbsp;``dataclasses.field()``.<br>
+-&nbsp;Arbitrary&nbsp;other&nbsp;keyword&nbsp;arguments&nbsp;are&nbsp;accepted&nbsp;in&nbsp;order&nbsp;to&nbsp;allow&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;possible&nbsp;future&nbsp;extensions.<br>
+&nbsp;<br>
+At&nbsp;runtime,&nbsp;this&nbsp;decorator&nbsp;records&nbsp;its&nbsp;arguments&nbsp;in&nbsp;the<br>
+``__dataclass_transform__``&nbsp;attribute&nbsp;on&nbsp;the&nbsp;decorated&nbsp;<a href="http://localhost:8000/builtins.html#object">object</a>.<br>
+It&nbsp;has&nbsp;no&nbsp;other&nbsp;runtime&nbsp;effect.<br>
+&nbsp;<br>
+See&nbsp;<a href="https://peps.python.org/pep-0681/">PEP&nbsp;681</a>&nbsp;for&nbsp;more&nbsp;details.</span></dd></dl>
+ <dl><dt><a name="-final"><strong>final</strong></a>(f)</dt><dd><span class="code">Decorator&nbsp;to&nbsp;indicate&nbsp;final&nbsp;methods&nbsp;and&nbsp;final&nbsp;classes.<br>
+&nbsp;<br>
+Use&nbsp;this&nbsp;decorator&nbsp;to&nbsp;indicate&nbsp;to&nbsp;type&nbsp;checkers&nbsp;that&nbsp;the&nbsp;decorated<br>
+method&nbsp;cannot&nbsp;be&nbsp;overridden,&nbsp;and&nbsp;decorated&nbsp;class&nbsp;cannot&nbsp;be&nbsp;subclassed.<br>
+&nbsp;<br>
+For&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Base:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@final<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;done(self)&nbsp;-&gt;&nbsp;None:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Sub(Base):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;done(self)&nbsp;-&gt;&nbsp;None:&nbsp;&nbsp;#&nbsp;Error&nbsp;reported&nbsp;by&nbsp;type&nbsp;checker<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;@final<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Leaf:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Other(Leaf):&nbsp;&nbsp;#&nbsp;Error&nbsp;reported&nbsp;by&nbsp;type&nbsp;checker<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;<br>
+There&nbsp;is&nbsp;no&nbsp;runtime&nbsp;checking&nbsp;of&nbsp;these&nbsp;properties.&nbsp;The&nbsp;decorator<br>
+attempts&nbsp;to&nbsp;set&nbsp;the&nbsp;``__final__``&nbsp;attribute&nbsp;to&nbsp;``True``&nbsp;on&nbsp;the&nbsp;decorated<br>
+<a href="http://localhost:8000/builtins.html#object">object</a>&nbsp;to&nbsp;allow&nbsp;runtime&nbsp;introspection.</span></dd></dl>
+ <dl><dt><a name="-get_args"><strong>get_args</strong></a>(tp)</dt><dd><span class="code">Get&nbsp;type&nbsp;arguments&nbsp;with&nbsp;all&nbsp;substitutions&nbsp;performed.<br>
+&nbsp;<br>
+For&nbsp;unions,&nbsp;basic&nbsp;simplifications&nbsp;used&nbsp;by&nbsp;Union&nbsp;constructor&nbsp;are&nbsp;performed.<br>
+&nbsp;<br>
+Examples::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;T&nbsp;=&nbsp;<a href="typing.html#TypeVar">TypeVar</a>('T')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;assert&nbsp;<a href="typing.html#-get_args">get_args</a>(Dict[str,&nbsp;int])&nbsp;==&nbsp;(str,&nbsp;int)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;assert&nbsp;<a href="typing.html#-get_args">get_args</a>(int)&nbsp;==&nbsp;()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;assert&nbsp;<a href="typing.html#-get_args">get_args</a>(Union[int,&nbsp;Union[T,&nbsp;int],&nbsp;str][int])&nbsp;==&nbsp;(int,&nbsp;str)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;assert&nbsp;<a href="typing.html#-get_args">get_args</a>(Union[int,&nbsp;Tuple[T,&nbsp;int]][str])&nbsp;==&nbsp;(int,&nbsp;Tuple[str,&nbsp;int])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;assert&nbsp;<a href="typing.html#-get_args">get_args</a>(Callable[[],&nbsp;T][int])&nbsp;==&nbsp;([],&nbsp;int)</span></dd></dl>
+ <dl><dt><a name="-get_origin"><strong>get_origin</strong></a>(tp)</dt><dd><span class="code">Get&nbsp;the&nbsp;unsubscripted&nbsp;version&nbsp;of&nbsp;a&nbsp;type.<br>
+&nbsp;<br>
+This&nbsp;supports&nbsp;generic&nbsp;types,&nbsp;Callable,&nbsp;Tuple,&nbsp;Union,&nbsp;Literal,&nbsp;Final,&nbsp;ClassVar,<br>
+Annotated,&nbsp;and&nbsp;others.&nbsp;Return&nbsp;None&nbsp;for&nbsp;unsupported&nbsp;types.<br>
+&nbsp;<br>
+Examples::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;P&nbsp;=&nbsp;<a href="typing.html#ParamSpec">ParamSpec</a>('P')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;assert&nbsp;<a href="typing.html#-get_origin">get_origin</a>(Literal[42])&nbsp;is&nbsp;Literal<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;assert&nbsp;<a href="typing.html#-get_origin">get_origin</a>(int)&nbsp;is&nbsp;None<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;assert&nbsp;<a href="typing.html#-get_origin">get_origin</a>(ClassVar[int])&nbsp;is&nbsp;ClassVar<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;assert&nbsp;<a href="typing.html#-get_origin">get_origin</a>(<a href="typing.html#Generic">Generic</a>)&nbsp;is&nbsp;<a href="typing.html#Generic">Generic</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;assert&nbsp;<a href="typing.html#-get_origin">get_origin</a>(<a href="typing.html#Generic">Generic</a>[T])&nbsp;is&nbsp;<a href="typing.html#Generic">Generic</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;assert&nbsp;<a href="typing.html#-get_origin">get_origin</a>(Union[T,&nbsp;int])&nbsp;is&nbsp;Union<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;assert&nbsp;<a href="typing.html#-get_origin">get_origin</a>(List[Tuple[T,&nbsp;T]][int])&nbsp;is&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;assert&nbsp;<a href="typing.html#-get_origin">get_origin</a>(P.args)&nbsp;is&nbsp;P</span></dd></dl>
+ <dl><dt><a name="-get_overloads"><strong>get_overloads</strong></a>(func)</dt><dd><span class="code">Return&nbsp;all&nbsp;defined&nbsp;overloads&nbsp;for&nbsp;*func*&nbsp;as&nbsp;a&nbsp;sequence.</span></dd></dl>
+ <dl><dt><a name="-get_protocol_members"><strong>get_protocol_members</strong></a>(tp: type, /) -&gt; frozenset[str]</dt><dd><span class="code">Return&nbsp;the&nbsp;set&nbsp;of&nbsp;members&nbsp;defined&nbsp;in&nbsp;a&nbsp;<a href="typing.html#Protocol">Protocol</a>.<br>
+&nbsp;<br>
+Example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;from&nbsp;typing&nbsp;import&nbsp;<a href="typing.html#Protocol">Protocol</a>,&nbsp;get_protocol_members<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;class&nbsp;P(<a href="typing.html#Protocol">Protocol</a>):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;a(self)&nbsp;-&gt;&nbsp;str:&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;<a href="typing.html#-get_protocol_members">get_protocol_members</a>(P)&nbsp;==&nbsp;frozenset({'a',&nbsp;'b'})<br>
+&nbsp;&nbsp;&nbsp;&nbsp;True<br>
+&nbsp;<br>
+Raise&nbsp;a&nbsp;TypeError&nbsp;for&nbsp;arguments&nbsp;that&nbsp;are&nbsp;not&nbsp;Protocols.</span></dd></dl>
+ <dl><dt><a name="-get_type_hints"><strong>get_type_hints</strong></a>(obj, globalns=None, localns=None, include_extras=False)</dt><dd><span class="code">Return&nbsp;type&nbsp;hints&nbsp;for&nbsp;an&nbsp;<a href="http://localhost:8000/builtins.html#object">object</a>.<br>
+&nbsp;<br>
+This&nbsp;is&nbsp;often&nbsp;the&nbsp;same&nbsp;as&nbsp;obj.__annotations__,&nbsp;but&nbsp;it&nbsp;handles<br>
+forward&nbsp;references&nbsp;encoded&nbsp;as&nbsp;string&nbsp;literals&nbsp;and&nbsp;recursively&nbsp;replaces&nbsp;all<br>
+'Annotated[T,&nbsp;...]'&nbsp;with&nbsp;'T'&nbsp;(unless&nbsp;'include_extras=True').<br>
+&nbsp;<br>
+The&nbsp;argument&nbsp;may&nbsp;be&nbsp;a&nbsp;module,&nbsp;class,&nbsp;method,&nbsp;or&nbsp;function.&nbsp;The&nbsp;annotations<br>
+are&nbsp;returned&nbsp;as&nbsp;a&nbsp;dictionary.&nbsp;For&nbsp;classes,&nbsp;annotations&nbsp;include&nbsp;also<br>
+inherited&nbsp;members.<br>
+&nbsp;<br>
+TypeError&nbsp;is&nbsp;raised&nbsp;if&nbsp;the&nbsp;argument&nbsp;is&nbsp;not&nbsp;of&nbsp;a&nbsp;type&nbsp;that&nbsp;can&nbsp;contain<br>
+annotations,&nbsp;and&nbsp;an&nbsp;empty&nbsp;dictionary&nbsp;is&nbsp;returned&nbsp;if&nbsp;no&nbsp;annotations&nbsp;are<br>
+present.<br>
+&nbsp;<br>
+BEWARE&nbsp;--&nbsp;the&nbsp;behavior&nbsp;of&nbsp;globalns&nbsp;and&nbsp;localns&nbsp;is&nbsp;counterintuitive<br>
+(unless&nbsp;you&nbsp;are&nbsp;familiar&nbsp;with&nbsp;how&nbsp;eval()&nbsp;and&nbsp;exec()&nbsp;work).&nbsp;&nbsp;The<br>
+search&nbsp;order&nbsp;is&nbsp;locals&nbsp;first,&nbsp;then&nbsp;globals.<br>
+&nbsp;<br>
+-&nbsp;If&nbsp;no&nbsp;dict&nbsp;arguments&nbsp;are&nbsp;passed,&nbsp;an&nbsp;attempt&nbsp;is&nbsp;made&nbsp;to&nbsp;use&nbsp;the<br>
+&nbsp;&nbsp;globals&nbsp;from&nbsp;obj&nbsp;(or&nbsp;the&nbsp;respective&nbsp;module's&nbsp;globals&nbsp;for&nbsp;classes),<br>
+&nbsp;&nbsp;and&nbsp;these&nbsp;are&nbsp;also&nbsp;used&nbsp;as&nbsp;the&nbsp;locals.&nbsp;&nbsp;If&nbsp;the&nbsp;<a href="http://localhost:8000/builtins.html#object">object</a>&nbsp;does&nbsp;not&nbsp;appear<br>
+&nbsp;&nbsp;to&nbsp;have&nbsp;globals,&nbsp;an&nbsp;empty&nbsp;dictionary&nbsp;is&nbsp;used.&nbsp;&nbsp;For&nbsp;classes,&nbsp;the&nbsp;search<br>
+&nbsp;&nbsp;order&nbsp;is&nbsp;globals&nbsp;first&nbsp;then&nbsp;locals.<br>
+&nbsp;<br>
+-&nbsp;If&nbsp;one&nbsp;dict&nbsp;argument&nbsp;is&nbsp;passed,&nbsp;it&nbsp;is&nbsp;used&nbsp;for&nbsp;both&nbsp;globals&nbsp;and<br>
+&nbsp;&nbsp;locals.<br>
+&nbsp;<br>
+-&nbsp;If&nbsp;two&nbsp;dict&nbsp;arguments&nbsp;are&nbsp;passed,&nbsp;they&nbsp;specify&nbsp;globals&nbsp;and<br>
+&nbsp;&nbsp;locals,&nbsp;respectively.</span></dd></dl>
+ <dl><dt><a name="-is_protocol"><strong>is_protocol</strong></a>(tp: type, /) -&gt; bool</dt><dd><span class="code">Return&nbsp;True&nbsp;if&nbsp;the&nbsp;given&nbsp;type&nbsp;is&nbsp;a&nbsp;<a href="typing.html#Protocol">Protocol</a>.<br>
+&nbsp;<br>
+Example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;from&nbsp;typing&nbsp;import&nbsp;<a href="typing.html#Protocol">Protocol</a>,&nbsp;is_protocol<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;class&nbsp;P(<a href="typing.html#Protocol">Protocol</a>):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;a(self)&nbsp;-&gt;&nbsp;str:&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;<a href="typing.html#-is_protocol">is_protocol</a>(P)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;True<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;<a href="typing.html#-is_protocol">is_protocol</a>(int)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;False</span></dd></dl>
+ <dl><dt><a name="-is_typeddict"><strong>is_typeddict</strong></a>(tp)</dt><dd><span class="code">Check&nbsp;if&nbsp;an&nbsp;annotation&nbsp;is&nbsp;a&nbsp;TypedDict&nbsp;class.<br>
+&nbsp;<br>
+For&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;from&nbsp;typing&nbsp;import&nbsp;TypedDict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;class&nbsp;Film(TypedDict):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;year:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;<a href="typing.html#-is_typeddict">is_typeddict</a>(Film)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;True<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;<a href="typing.html#-is_typeddict">is_typeddict</a>(dict)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;False</span></dd></dl>
+ <dl><dt><a name="-no_type_check"><strong>no_type_check</strong></a>(arg)</dt><dd><span class="code">Decorator&nbsp;to&nbsp;indicate&nbsp;that&nbsp;annotations&nbsp;are&nbsp;not&nbsp;type&nbsp;hints.<br>
+&nbsp;<br>
+The&nbsp;argument&nbsp;must&nbsp;be&nbsp;a&nbsp;class&nbsp;or&nbsp;function;&nbsp;if&nbsp;it&nbsp;is&nbsp;a&nbsp;class,&nbsp;it<br>
+applies&nbsp;recursively&nbsp;to&nbsp;all&nbsp;methods&nbsp;and&nbsp;classes&nbsp;defined&nbsp;in&nbsp;that&nbsp;class<br>
+(but&nbsp;not&nbsp;to&nbsp;methods&nbsp;defined&nbsp;in&nbsp;its&nbsp;superclasses&nbsp;or&nbsp;subclasses).<br>
+&nbsp;<br>
+This&nbsp;mutates&nbsp;the&nbsp;function(s)&nbsp;or&nbsp;class(es)&nbsp;in&nbsp;place.</span></dd></dl>
+ <dl><dt><a name="-no_type_check_decorator"><strong>no_type_check_decorator</strong></a>(decorator)</dt><dd><span class="code">Decorator&nbsp;to&nbsp;give&nbsp;another&nbsp;decorator&nbsp;the&nbsp;@no_type_check&nbsp;effect.<br>
+&nbsp;<br>
+This&nbsp;wraps&nbsp;the&nbsp;decorator&nbsp;with&nbsp;something&nbsp;that&nbsp;wraps&nbsp;the&nbsp;decorated<br>
+function&nbsp;in&nbsp;@no_type_check.</span></dd></dl>
+ <dl><dt><a name="-overload"><strong>overload</strong></a>(func)</dt><dd><span class="code">Decorator&nbsp;for&nbsp;overloaded&nbsp;functions/methods.<br>
+&nbsp;<br>
+In&nbsp;a&nbsp;stub&nbsp;file,&nbsp;place&nbsp;two&nbsp;or&nbsp;more&nbsp;stub&nbsp;definitions&nbsp;for&nbsp;the&nbsp;same<br>
+function&nbsp;in&nbsp;a&nbsp;row,&nbsp;each&nbsp;decorated&nbsp;with&nbsp;@overload.<br>
+&nbsp;<br>
+For&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;@overload<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;utf8(value:&nbsp;None)&nbsp;-&gt;&nbsp;None:&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;@overload<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;utf8(value:&nbsp;bytes)&nbsp;-&gt;&nbsp;bytes:&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;@overload<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;utf8(value:&nbsp;str)&nbsp;-&gt;&nbsp;bytes:&nbsp;...<br>
+&nbsp;<br>
+In&nbsp;a&nbsp;non-stub&nbsp;file&nbsp;(i.e.&nbsp;a&nbsp;regular&nbsp;.py&nbsp;file),&nbsp;do&nbsp;the&nbsp;same&nbsp;but<br>
+follow&nbsp;it&nbsp;with&nbsp;an&nbsp;implementation.&nbsp;&nbsp;The&nbsp;implementation&nbsp;should&nbsp;*not*<br>
+be&nbsp;decorated&nbsp;with&nbsp;@overload::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;@overload<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;utf8(value:&nbsp;None)&nbsp;-&gt;&nbsp;None:&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;@overload<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;utf8(value:&nbsp;bytes)&nbsp;-&gt;&nbsp;bytes:&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;@overload<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;utf8(value:&nbsp;str)&nbsp;-&gt;&nbsp;bytes:&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;utf8(value):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;#&nbsp;implementation&nbsp;goes&nbsp;here<br>
+&nbsp;<br>
+The&nbsp;overloads&nbsp;for&nbsp;a&nbsp;function&nbsp;can&nbsp;be&nbsp;retrieved&nbsp;at&nbsp;runtime&nbsp;using&nbsp;the<br>
+<a href="typing.html#-get_overloads">get_overloads</a>()&nbsp;function.</span></dd></dl>
+ <dl><dt><a name="-override"><strong>override</strong></a>(method: F, /) -&gt; F</dt><dd><span class="code">Indicate&nbsp;that&nbsp;a&nbsp;method&nbsp;is&nbsp;intended&nbsp;to&nbsp;override&nbsp;a&nbsp;method&nbsp;in&nbsp;a&nbsp;base&nbsp;class.<br>
+&nbsp;<br>
+Usage::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Base:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;method(self)&nbsp;-&gt;&nbsp;None:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Child(Base):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@override<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;method(self)&nbsp;-&gt;&nbsp;None:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super().method()<br>
+&nbsp;<br>
+When&nbsp;this&nbsp;decorator&nbsp;is&nbsp;applied&nbsp;to&nbsp;a&nbsp;method,&nbsp;the&nbsp;type&nbsp;checker&nbsp;will<br>
+validate&nbsp;that&nbsp;it&nbsp;overrides&nbsp;a&nbsp;method&nbsp;or&nbsp;attribute&nbsp;with&nbsp;the&nbsp;same&nbsp;name&nbsp;on&nbsp;a<br>
+base&nbsp;class.&nbsp;&nbsp;This&nbsp;helps&nbsp;prevent&nbsp;bugs&nbsp;that&nbsp;may&nbsp;occur&nbsp;when&nbsp;a&nbsp;base&nbsp;class&nbsp;is<br>
+changed&nbsp;without&nbsp;an&nbsp;equivalent&nbsp;change&nbsp;to&nbsp;a&nbsp;child&nbsp;class.<br>
+&nbsp;<br>
+There&nbsp;is&nbsp;no&nbsp;runtime&nbsp;checking&nbsp;of&nbsp;this&nbsp;property.&nbsp;The&nbsp;decorator&nbsp;attempts&nbsp;to<br>
+set&nbsp;the&nbsp;``__override__``&nbsp;attribute&nbsp;to&nbsp;``True``&nbsp;on&nbsp;the&nbsp;decorated&nbsp;<a href="http://localhost:8000/builtins.html#object">object</a>&nbsp;to<br>
+allow&nbsp;runtime&nbsp;introspection.<br>
+&nbsp;<br>
+See&nbsp;<a href="https://peps.python.org/pep-0698/">PEP&nbsp;698</a>&nbsp;for&nbsp;details.</span></dd></dl>
+ <dl><dt><a name="-reveal_type"><strong>reveal_type</strong></a>(obj: T, /) -&gt; T</dt><dd><span class="code">Ask&nbsp;a&nbsp;static&nbsp;type&nbsp;checker&nbsp;to&nbsp;reveal&nbsp;the&nbsp;inferred&nbsp;type&nbsp;of&nbsp;an&nbsp;expression.<br>
+&nbsp;<br>
+When&nbsp;a&nbsp;static&nbsp;type&nbsp;checker&nbsp;encounters&nbsp;a&nbsp;call&nbsp;to&nbsp;``<a href="typing.html#-reveal_type">reveal_type</a>()``,<br>
+it&nbsp;will&nbsp;emit&nbsp;the&nbsp;inferred&nbsp;type&nbsp;of&nbsp;the&nbsp;argument::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;x:&nbsp;int&nbsp;=&nbsp;1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="typing.html#-reveal_type">reveal_type</a>(x)<br>
+&nbsp;<br>
+Running&nbsp;a&nbsp;static&nbsp;type&nbsp;checker&nbsp;(e.g.,&nbsp;mypy)&nbsp;on&nbsp;this&nbsp;example<br>
+will&nbsp;produce&nbsp;output&nbsp;similar&nbsp;to&nbsp;'Revealed&nbsp;type&nbsp;is&nbsp;"builtins.int"'.<br>
+&nbsp;<br>
+At&nbsp;runtime,&nbsp;the&nbsp;function&nbsp;prints&nbsp;the&nbsp;runtime&nbsp;type&nbsp;of&nbsp;the<br>
+argument&nbsp;and&nbsp;returns&nbsp;the&nbsp;argument&nbsp;unchanged.</span></dd></dl>
+ <dl><dt><a name="-runtime_checkable"><strong>runtime_checkable</strong></a>(cls)</dt><dd><span class="code">Mark&nbsp;a&nbsp;protocol&nbsp;class&nbsp;as&nbsp;a&nbsp;runtime&nbsp;protocol.<br>
+&nbsp;<br>
+Such&nbsp;protocol&nbsp;can&nbsp;be&nbsp;used&nbsp;with&nbsp;isinstance()&nbsp;and&nbsp;issubclass().<br>
+Raise&nbsp;TypeError&nbsp;if&nbsp;applied&nbsp;to&nbsp;a&nbsp;non-protocol&nbsp;class.<br>
+This&nbsp;allows&nbsp;a&nbsp;simple-minded&nbsp;structural&nbsp;check&nbsp;very&nbsp;similar&nbsp;to<br>
+one&nbsp;trick&nbsp;ponies&nbsp;in&nbsp;collections.abc&nbsp;such&nbsp;as&nbsp;Iterable.<br>
+&nbsp;<br>
+For&nbsp;example::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;@runtime_checkable<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;Closable(<a href="typing.html#Protocol">Protocol</a>):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;def&nbsp;close(self):&nbsp;...<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;assert&nbsp;isinstance(open('/some/file'),&nbsp;Closable)<br>
+&nbsp;<br>
+Warning:&nbsp;this&nbsp;will&nbsp;check&nbsp;only&nbsp;the&nbsp;presence&nbsp;of&nbsp;the&nbsp;required&nbsp;methods,<br>
+not&nbsp;their&nbsp;type&nbsp;signatures!</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>AbstractSet</strong> = typing.AbstractSet<br>
+<strong>Annotated</strong> = typing.Annotated<br>
+<strong>AnyStr</strong> = ~AnyStr<br>
+<strong>AsyncGenerator</strong> = typing.AsyncGenerator<br>
+<strong>AsyncIterable</strong> = typing.AsyncIterable<br>
+<strong>AsyncIterator</strong> = typing.AsyncIterator<br>
+<strong>Awaitable</strong> = typing.Awaitable<br>
+<strong>ByteString</strong> = typing.ByteString<br>
+<strong>Callable</strong> = typing.Callable<br>
+<strong>ChainMap</strong> = typing.ChainMap<br>
+<strong>ClassVar</strong> = typing.ClassVar<br>
+<strong>Collection</strong> = typing.Collection<br>
+<strong>Concatenate</strong> = typing.Concatenate<br>
+<strong>Container</strong> = typing.Container<br>
+<strong>Coroutine</strong> = typing.Coroutine<br>
+<strong>Counter</strong> = typing.Counter<br>
+<strong>DefaultDict</strong> = typing.DefaultDict<br>
+<strong>Deque</strong> = typing.Deque<br>
+<strong>Dict</strong> = typing.Dict<br>
+<strong>Final</strong> = typing.Final<br>
+<strong>FrozenSet</strong> = typing.FrozenSet<br>
+<strong>Generator</strong> = typing.Generator<br>
+<strong>Hashable</strong> = typing.Hashable<br>
+<strong>ItemsView</strong> = typing.ItemsView<br>
+<strong>Iterable</strong> = typing.Iterable<br>
+<strong>Iterator</strong> = typing.Iterator<br>
+<strong>KeysView</strong> = typing.KeysView<br>
+<strong>List</strong> = typing.List<br>
+<strong>Literal</strong> = typing.Literal<br>
+<strong>LiteralString</strong> = typing.LiteralString<br>
+<strong>Mapping</strong> = typing.Mapping<br>
+<strong>MappingView</strong> = typing.MappingView<br>
+<strong>MutableMapping</strong> = typing.MutableMapping<br>
+<strong>MutableSequence</strong> = typing.MutableSequence<br>
+<strong>MutableSet</strong> = typing.MutableSet<br>
+<strong>Never</strong> = typing.Never<br>
+<strong>NoDefault</strong> = typing.NoDefault<br>
+<strong>NoReturn</strong> = typing.NoReturn<br>
+<strong>NotRequired</strong> = typing.NotRequired<br>
+<strong>Optional</strong> = typing.Optional<br>
+<strong>OrderedDict</strong> = typing.OrderedDict<br>
+<strong>ReadOnly</strong> = typing.ReadOnly<br>
+<strong>Required</strong> = typing.Required<br>
+<strong>Reversible</strong> = typing.Reversible<br>
+<strong>Self</strong> = typing.Self<br>
+<strong>Sequence</strong> = typing.Sequence<br>
+<strong>Set</strong> = typing.Set<br>
+<strong>Sized</strong> = typing.Sized<br>
+<strong>TYPE_CHECKING</strong> = False<br>
+<strong>Tuple</strong> = typing.Tuple<br>
+<strong>Type</strong> = typing.Type<br>
+<strong>TypeAlias</strong> = typing.TypeAlias<br>
+<strong>TypeGuard</strong> = typing.TypeGuard<br>
+<strong>TypeIs</strong> = typing.TypeIs<br>
+<strong>Union</strong> = typing.Union<br>
+<strong>Unpack</strong> = typing.Unpack<br>
+<strong>ValuesView</strong> = typing.ValuesView<br>
+<strong>__all__</strong> = ['Annotated', 'Any', 'Callable', 'ClassVar', 'Concatenate', 'Final', 'ForwardRef', 'Generic', 'Literal', 'Optional', 'ParamSpec', 'Protocol', 'Tuple', 'Type', 'TypeVar', 'TypeVarTuple', 'Union', 'AbstractSet', 'ByteString', 'Container', ...]</td></tr></table></div>
+</body></html>

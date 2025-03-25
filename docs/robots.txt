@@ -1,0 +1,40 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pydoc: Error - robots.txt</title>
+<link rel="stylesheet" type="text/css" href="pydoc_data/_pydoc.css"></head><body>
+            <div style='float:left'>
+                Python 3.13.1 [tags/v3.13.1:0671451, MSC v.1942 64 bit (AMD64)]
+            </div>
+            <div style='float:right'>
+                <div style='text-align:center'>
+                  <a href="http://localhost:8000/index.html">Module Index</a>
+                  : <a href="http://localhost:8000/topics.html">Topics</a>
+                  : <a href="http://localhost:8000/keywords.html">Keywords</a>
+                </div>
+                <div>
+                    <form action="http://localhost:8000/get" style='display:inline;'>
+                      <input type=text name=key size=15>
+                      <input type=submit value="Get">
+                    </form>&nbsp;
+                    <form action="http://localhost:8000/search" style='display:inline;'>
+                      <input type=text name=key size=15>
+                      <input type=submit value="Search">
+                    </form>
+                </div>
+            </div>
+            <div style="clear:both;padding-top:.5em;">
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">Error</strong></td>
+<td class="extra">&nbsp;</td></tr></table>
+    <p>
+<table class="section">
+<tr class="decor error-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">robots.txt</strong></td></tr>
+    
+<tr><td class="decor error-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn">ValueError: could not find object
+</td></tr></table></div>
+</body></html>
