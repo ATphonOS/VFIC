@@ -1,0 +1,9 @@
+http://localhost:8000/VFIC.html
+http://localhost:8000/os.html
+http://localhost:8000/hashlib.html
+http://localhost:8000/tkinter.html
+http://localhost:8000/tkinter.ttk.html
+http://localhost:8000/tkinter.filedialog.html
+http://localhost:8000/tkinter.messagebox.html
+http://localhost:8000/typing.html
+http://localhost:8000/datetime.html
