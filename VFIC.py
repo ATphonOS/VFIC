@@ -18,12 +18,26 @@ BUTTON_FONT = ("Helvetica", 9)
 BUTTON_PADDING = 3
 
 class FileInfo(NamedTuple):
+    """Represents file metadata for integrity checking.
+    
+    Attributes:
+        filename (str): Name of the file.
+        extension (str): File extension.
+        hash (str): Hash value of the file.
+    """
     filename: str
     extension: str
     hash: str
 
 class IntegrityCheckerGUI:
+    """GUI application for checking file integrity against a reference hash file."""
+    
     def __init__(self, root):
+        """Initialize the IntegrityCheckerGUI.
+
+        Args:
+            root (tk.Tk): The root Tkinter window.
+        """
         self.root = root
         self.root.title("Version File Integrity Check")
         self.root.geometry("640x570")
@@ -80,6 +94,7 @@ class IntegrityCheckerGUI:
         self.create_debug_console()
         
     def create_debug_console(self):
+        """Set up the debug console text widget."""
         self.debug_text = tk.Text(self.root, 
                                 height=5, 
                                 width=70, 
@@ -100,6 +115,12 @@ class IntegrityCheckerGUI:
         self.debug_print("\n---- Log ----")    
 
     def debug_print(self, message, link=False):
+        """Display a message in the debug console.
+
+        Args:
+            message (str): The message to display.
+            link (bool, optional): If True, display as a clickable link. Defaults to False.
+        """
         self.debug_text.configure(state='normal')
         if link:
             self.debug_text.insert(tk.END, f"{message}\n", "link")
@@ -111,6 +132,11 @@ class IntegrityCheckerGUI:
         self.root.update()
     
     def open_log_file(self, event):
+        """Open the saved log file in the default system application.
+
+        Args:
+            event: The event triggering the action (mouse click).
+        """
         if self.log_file_path and os.path.exists(self.log_file_path):
             try:
                 os.startfile(self.log_file_path)  # Windows
@@ -124,6 +150,11 @@ class IntegrityCheckerGUI:
                         self.debug_print("Error: Could not open log file")
 
     def save_log(self, directory):
+        """Save the log messages to a file in the specified directory.
+
+        Args:
+            directory (str): The directory where the log file will be saved.
+        """
         try:
             self.log_file_path = os.path.join(directory, "vic_log.txt")
             with open(self.log_file_path, 'w', encoding='utf-8') as f:
@@ -134,6 +165,7 @@ class IntegrityCheckerGUI:
             messagebox.showerror("Error", f"Failed to save log file: {e}")
         
     def create_widgets(self):
+        """Create and arrange the main GUI widgets."""
         main_frame = ttk.Frame(self.root, padding=PADDING)
         main_frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
         
@@ -152,6 +184,11 @@ class IntegrityCheckerGUI:
         self.status_label.grid(row=3, column=0, columnspan=3, sticky=tk.W, pady=5)
         
     def create_treeview(self, parent):
+        """Create and configure the Treeview widget for displaying file check results.
+
+        Args:
+            parent: The parent widget to contain the Treeview.
+        """
         tree_frame = ttk.Frame(parent)
         tree_frame.grid(row=2, column=0, columnspan=3, sticky=(tk.W, tk.E, tk.N, tk.S), pady=5)
         
@@ -179,6 +216,7 @@ class IntegrityCheckerGUI:
         self.tree.tag_configure("error", foreground="#F44336")
         
     def browse_directory(self):
+        """Open a directory selection dialog and update the entry field."""
         directory = filedialog.askdirectory()
         if directory:
             self.dir_entry.delete(0, tk.END)
@@ -186,6 +224,14 @@ class IntegrityCheckerGUI:
             self.debug_print(f"Selected directory: {directory}")
             
     def calculate_file_hash(self, filepath: str) -> Optional[str]:
+        """Calculate the SHA-1 hash of a file.
+
+        Args:
+            filepath (str): Path to the file.
+
+        Returns:
+            Optional[str]: The first 16 characters of the SHA-1 hash, or None if an error occurs.
+        """
         try:
             with open(filepath, 'rb') as f:
                 sha1 = hashlib.sha1()
@@ -197,6 +243,14 @@ class IntegrityCheckerGUI:
             return None
             
     def parse_reference_data(self, filepath: str) -> Tuple[Dict[str, FileInfo], str]:
+        """Parse reference hash data from a file.
+
+        Args:
+            filepath (str): Path to the reference file.
+
+        Returns:
+            Tuple[Dict[str, FileInfo], str]: A dictionary of file info and the final message.
+        """
         reference_data = {}
         final_message = ""
         try:
@@ -240,6 +294,7 @@ class IntegrityCheckerGUI:
         return reference_data, final_message
         
     def check_integrity(self):
+        """Perform the file integrity check against reference data."""
         try:
             self.log_messages = []
             self.debug_print("\n--- Starting integrity check ---")
@@ -341,9 +396,12 @@ class IntegrityCheckerGUI:
                 self.save_log(self.dir_entry.get())
 
 def main():
+    """Entry point for the Integrity Checker application."""
     root = tk.Tk()
     app = IntegrityCheckerGUI(root)
     root.mainloop()
 
 if __name__ == "__main__":
     main()
+
+ 
