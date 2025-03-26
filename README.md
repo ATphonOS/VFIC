@@ -11,7 +11,7 @@ Option 1 (generates a single exe file):
 
 ```Python
 pyinstaller --onefile --windowed --icon=icon/logo_app.png --add-data "icon/logo_app.png;icon" 
---name Version File Integrity Check VFIC.py
+--name "Version File Integrity Check" VFIC.py
 ```
 
 Option 2:
@@ -20,7 +20,7 @@ Compile command (create a folder with the executable and all dependencies):
 
 ```Python
 pyinstaller --onedir --windowed --icon=icon/logo_app.png --add-data "icon/logo_app.png;icon" 
---name Version File Integrity Check VFIC.py
+--name "Version File Integrity Check" VFIC.py
 ```
 
 
